@@ -188,7 +188,7 @@
   "rationale": {
     "algorithm": "deterministic multi-start local search over stratification error",
     "seed": 20260831,
-    "objective_score": 4.433043144328064,
+    "objective_score": 4.433043144328063,
     "test_task_count": 30,
     "train_task_count": 150,
     "stratification_dimensions": [

@@ -159,7 +159,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -172,7 +172,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -198,7 +198,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -211,7 +211,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -237,7 +237,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -250,7 +250,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -263,7 +263,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -276,7 +276,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -289,7 +289,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -315,7 +315,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -328,7 +328,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -341,7 +341,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -354,7 +354,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -367,7 +367,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -393,7 +393,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -406,7 +406,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -419,7 +419,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -432,7 +432,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -445,7 +445,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -471,7 +471,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -484,7 +484,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -497,7 +497,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -510,7 +510,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -523,7 +523,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -549,7 +549,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -562,7 +562,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -575,7 +575,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -588,7 +588,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -601,7 +601,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -679,7 +679,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -705,7 +705,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -744,7 +744,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -783,7 +783,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -796,7 +796,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -809,7 +809,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -822,7 +822,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -861,7 +861,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -874,7 +874,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -887,7 +887,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -900,7 +900,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -913,7 +913,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -939,7 +939,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -952,7 +952,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -965,7 +965,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -978,7 +978,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -991,7 +991,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -1030,7 +1030,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -1043,7 +1043,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -1056,7 +1056,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -1069,7 +1069,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -1186,7 +1186,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -1212,7 +1212,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -1225,7 +1225,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -1238,7 +1238,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -1264,7 +1264,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -1277,7 +1277,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -1290,7 +1290,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -1303,7 +1303,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -1316,7 +1316,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -1342,7 +1342,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -1355,7 +1355,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -1368,7 +1368,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -1381,7 +1381,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -1394,7 +1394,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -1420,7 +1420,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -1433,7 +1433,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -1459,7 +1459,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -1472,7 +1472,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -1511,7 +1511,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -1524,7 +1524,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -1576,7 +1576,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -1589,7 +1589,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -1602,7 +1602,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -1615,7 +1615,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -1628,7 +1628,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -1654,7 +1654,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -1667,7 +1667,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -1693,7 +1693,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -1706,7 +1706,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -1745,7 +1745,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -1758,7 +1758,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -1810,7 +1810,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -1836,7 +1836,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -1888,7 +1888,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -1901,7 +1901,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -1940,7 +1940,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -2057,7 +2057,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -2135,7 +2135,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -2148,7 +2148,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -2161,7 +2161,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -2174,7 +2174,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -2187,7 +2187,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -2213,7 +2213,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -2226,7 +2226,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -2239,7 +2239,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -2317,7 +2317,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -2330,7 +2330,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "test"
     },
@@ -2434,7 +2434,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -2447,7 +2447,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -2460,7 +2460,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -2473,7 +2473,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -2486,7 +2486,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -2538,7 +2538,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -2551,7 +2551,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -2564,7 +2564,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -2590,7 +2590,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -2603,7 +2603,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -2616,7 +2616,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -2629,7 +2629,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -2642,7 +2642,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -2681,7 +2681,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -2694,7 +2694,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -2707,7 +2707,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -2720,7 +2720,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -2746,7 +2746,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -2759,7 +2759,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -2772,7 +2772,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -2798,7 +2798,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -2824,7 +2824,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -2837,7 +2837,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -2850,7 +2850,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -2863,7 +2863,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -2876,7 +2876,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -2902,7 +2902,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -2915,7 +2915,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -2928,7 +2928,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -2941,7 +2941,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -2954,7 +2954,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -3071,7 +3071,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -3097,7 +3097,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -3123,7 +3123,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -3149,7 +3149,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -3162,7 +3162,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -3175,7 +3175,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -3188,7 +3188,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -3201,7 +3201,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -3279,7 +3279,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -3331,7 +3331,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -3344,7 +3344,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -3357,7 +3357,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -3383,7 +3383,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -3396,7 +3396,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -3409,7 +3409,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -3422,7 +3422,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -3435,7 +3435,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -3461,7 +3461,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -3474,7 +3474,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -3487,7 +3487,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -3500,7 +3500,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -3513,7 +3513,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -3539,7 +3539,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -3552,7 +3552,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -3565,7 +3565,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -3578,7 +3578,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -3591,7 +3591,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -3643,7 +3643,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -3708,7 +3708,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -3799,7 +3799,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -3812,7 +3812,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -3825,7 +3825,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -3838,7 +3838,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -3864,7 +3864,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -3877,7 +3877,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -3890,7 +3890,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -3903,7 +3903,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -3916,7 +3916,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -3968,7 +3968,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -4033,7 +4033,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -4072,7 +4072,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -4189,7 +4189,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -4241,7 +4241,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -4267,7 +4267,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -4280,7 +4280,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -4293,7 +4293,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -4306,7 +4306,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -4358,7 +4358,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -4397,7 +4397,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -4423,7 +4423,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -4436,7 +4436,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -4449,7 +4449,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -4462,7 +4462,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -4475,7 +4475,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -4501,7 +4501,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -4514,7 +4514,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -4527,7 +4527,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -4553,7 +4553,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -4631,7 +4631,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -4657,7 +4657,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -4670,7 +4670,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -4683,7 +4683,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -4748,7 +4748,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -4787,7 +4787,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -4813,7 +4813,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -4826,7 +4826,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -4839,7 +4839,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -4852,7 +4852,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -4865,7 +4865,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -4891,7 +4891,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -4904,7 +4904,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -4930,7 +4930,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -4943,7 +4943,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -4969,7 +4969,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -4982,7 +4982,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -4995,7 +4995,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5008,7 +5008,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5021,7 +5021,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5086,7 +5086,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5125,7 +5125,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5203,7 +5203,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5281,7 +5281,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5294,7 +5294,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5307,7 +5307,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5320,7 +5320,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5333,7 +5333,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5359,7 +5359,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5372,7 +5372,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5385,7 +5385,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5398,7 +5398,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5411,7 +5411,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5437,7 +5437,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5450,7 +5450,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5463,7 +5463,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5476,7 +5476,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5489,7 +5489,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5515,7 +5515,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5554,7 +5554,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5593,7 +5593,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5619,7 +5619,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5632,7 +5632,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5645,7 +5645,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5671,7 +5671,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5684,7 +5684,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5697,7 +5697,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5710,7 +5710,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5723,7 +5723,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5749,7 +5749,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5762,7 +5762,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5775,7 +5775,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5788,7 +5788,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5801,7 +5801,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5827,7 +5827,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5840,7 +5840,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5853,7 +5853,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5866,7 +5866,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5879,7 +5879,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -5918,7 +5918,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -6061,7 +6061,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -6074,7 +6074,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -6087,7 +6087,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -6100,7 +6100,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -6113,7 +6113,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -6139,7 +6139,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -6152,7 +6152,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -6165,7 +6165,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -6178,7 +6178,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -6191,7 +6191,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -6295,7 +6295,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -6308,7 +6308,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -6334,7 +6334,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -6347,7 +6347,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -6373,7 +6373,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -6386,7 +6386,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -6399,7 +6399,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -6412,7 +6412,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -6425,7 +6425,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -6464,7 +6464,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -6477,7 +6477,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -6529,7 +6529,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -6542,7 +6542,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -6555,7 +6555,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -6568,7 +6568,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -6581,7 +6581,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -6607,7 +6607,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -6620,7 +6620,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -6633,7 +6633,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -6646,7 +6646,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -6659,7 +6659,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -6789,7 +6789,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -6919,7 +6919,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -6932,7 +6932,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -6945,7 +6945,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -6958,7 +6958,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -6971,7 +6971,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -7036,7 +7036,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -7075,7 +7075,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -7088,7 +7088,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -7101,7 +7101,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -7127,7 +7127,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -7153,7 +7153,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -7166,7 +7166,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -7179,7 +7179,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -7192,7 +7192,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -7205,7 +7205,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -7387,7 +7387,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -7400,7 +7400,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -7426,7 +7426,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -7465,7 +7465,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -7478,7 +7478,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -7517,7 +7517,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -7543,7 +7543,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -7556,7 +7556,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -7569,7 +7569,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -7582,7 +7582,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -7595,7 +7595,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -7647,7 +7647,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -7673,7 +7673,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -7712,7 +7712,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -7725,7 +7725,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -7738,7 +7738,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -7764,7 +7764,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -7790,7 +7790,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -7803,7 +7803,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -7816,7 +7816,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -7829,7 +7829,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -7842,7 +7842,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -7868,7 +7868,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -7894,7 +7894,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -7907,7 +7907,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -7946,7 +7946,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -7959,7 +7959,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -7972,7 +7972,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -7985,7 +7985,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -7998,7 +7998,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -8050,7 +8050,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -8076,7 +8076,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -8193,7 +8193,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -8206,7 +8206,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -8219,7 +8219,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -8232,7 +8232,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -8245,7 +8245,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -8271,7 +8271,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -8284,7 +8284,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -8297,7 +8297,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -8310,7 +8310,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -8323,7 +8323,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -8375,7 +8375,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -8427,7 +8427,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -8440,7 +8440,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -8453,7 +8453,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -8466,7 +8466,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -8479,7 +8479,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -8583,7 +8583,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -8596,7 +8596,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -8609,7 +8609,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -8622,7 +8622,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -8635,7 +8635,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -8661,7 +8661,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -8674,7 +8674,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -8687,7 +8687,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -8700,7 +8700,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -8713,7 +8713,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -8739,7 +8739,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -8752,7 +8752,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -8765,7 +8765,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -8778,7 +8778,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -8791,7 +8791,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -8817,7 +8817,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -8843,7 +8843,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -8856,7 +8856,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -8908,7 +8908,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -8973,7 +8973,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -8986,7 +8986,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -9025,7 +9025,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -9051,7 +9051,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -9064,7 +9064,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -9077,7 +9077,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -9103,7 +9103,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -9207,7 +9207,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -9220,7 +9220,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -9233,7 +9233,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -9246,7 +9246,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -9285,7 +9285,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -9298,7 +9298,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -9311,7 +9311,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -9324,7 +9324,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -9337,7 +9337,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -9363,7 +9363,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -9376,7 +9376,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -9389,7 +9389,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -9415,7 +9415,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -9441,7 +9441,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -9519,7 +9519,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -9532,7 +9532,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -9545,7 +9545,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -9558,7 +9558,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -9571,7 +9571,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -9597,7 +9597,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -9610,7 +9610,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -9623,7 +9623,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -9636,7 +9636,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -9649,7 +9649,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -9675,7 +9675,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -9727,7 +9727,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -9753,7 +9753,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -9766,7 +9766,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -9779,7 +9779,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -9792,7 +9792,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -9805,7 +9805,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -9909,7 +9909,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -9922,7 +9922,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -10013,7 +10013,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -10026,7 +10026,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -10039,7 +10039,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -10052,7 +10052,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -10065,7 +10065,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -10104,7 +10104,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -10117,7 +10117,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -10130,7 +10130,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -10143,7 +10143,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -10156,7 +10156,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -10195,7 +10195,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -10208,7 +10208,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -10221,7 +10221,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -10234,7 +10234,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -10247,7 +10247,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -10286,7 +10286,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -10312,7 +10312,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -10325,7 +10325,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -10455,7 +10455,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -10533,7 +10533,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -10689,7 +10689,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -10702,7 +10702,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -10715,7 +10715,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -10819,7 +10819,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -10832,7 +10832,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -10845,7 +10845,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -10858,7 +10858,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -10871,7 +10871,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -10975,7 +10975,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11001,7 +11001,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11014,7 +11014,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11027,7 +11027,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11053,7 +11053,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11066,7 +11066,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11079,7 +11079,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11092,7 +11092,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11105,7 +11105,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11131,7 +11131,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11144,7 +11144,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11157,7 +11157,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11170,7 +11170,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11183,7 +11183,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11222,7 +11222,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11287,7 +11287,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11300,7 +11300,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11313,7 +11313,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11326,7 +11326,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11339,7 +11339,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11378,7 +11378,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11391,7 +11391,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11404,7 +11404,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11417,7 +11417,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11430,7 +11430,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11456,7 +11456,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11469,7 +11469,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11482,7 +11482,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11495,7 +11495,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11508,7 +11508,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11534,7 +11534,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11547,7 +11547,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11560,7 +11560,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11573,7 +11573,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11586,7 +11586,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11625,7 +11625,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11638,7 +11638,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11651,7 +11651,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11664,7 +11664,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11677,7 +11677,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11703,7 +11703,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11716,7 +11716,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11729,7 +11729,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11742,7 +11742,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11755,7 +11755,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11794,7 +11794,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11807,7 +11807,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11820,7 +11820,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11833,7 +11833,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11846,7 +11846,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11872,7 +11872,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11885,7 +11885,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11898,7 +11898,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11911,7 +11911,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11924,7 +11924,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11950,7 +11950,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11963,7 +11963,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11976,7 +11976,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -11989,7 +11989,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -12002,7 +12002,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -12106,7 +12106,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -12119,7 +12119,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -12145,7 +12145,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -12184,7 +12184,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -12236,7 +12236,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -12301,7 +12301,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -12340,7 +12340,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -12353,7 +12353,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -12366,7 +12366,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -12379,7 +12379,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -12392,7 +12392,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -12444,7 +12444,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -12535,7 +12535,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -12574,7 +12574,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -12587,7 +12587,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -12600,7 +12600,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -12613,7 +12613,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -12626,7 +12626,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -12665,7 +12665,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -12678,7 +12678,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -12691,7 +12691,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -12704,7 +12704,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -12717,7 +12717,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -12743,7 +12743,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -12795,7 +12795,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -12821,7 +12821,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -12834,7 +12834,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -12847,7 +12847,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -12860,7 +12860,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -12873,7 +12873,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -12990,7 +12990,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -13003,7 +13003,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -13016,7 +13016,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -13029,7 +13029,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -13042,7 +13042,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -13068,7 +13068,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -13081,7 +13081,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -13094,7 +13094,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -13224,7 +13224,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -13237,7 +13237,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -13250,7 +13250,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -13263,7 +13263,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -13276,7 +13276,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -13393,7 +13393,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -13458,7 +13458,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -13471,7 +13471,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -13484,7 +13484,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -13497,7 +13497,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -13510,7 +13510,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -13536,7 +13536,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -13588,7 +13588,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -13614,7 +13614,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -13627,7 +13627,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -13640,7 +13640,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -13653,7 +13653,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -13666,7 +13666,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -13705,7 +13705,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -13770,7 +13770,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -13783,7 +13783,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -13796,7 +13796,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -13809,7 +13809,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -13822,7 +13822,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "current_rerun_20260831",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -13900,7 +13900,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -13926,7 +13926,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -13939,7 +13939,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -13952,7 +13952,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -13965,7 +13965,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -13978,7 +13978,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -14004,7 +14004,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -14017,7 +14017,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -14030,7 +14030,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -14043,7 +14043,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -14056,7 +14056,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -14082,7 +14082,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -14095,7 +14095,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -14108,7 +14108,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -14121,7 +14121,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -14134,7 +14134,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -14160,7 +14160,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -14173,7 +14173,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -14186,7 +14186,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -14199,7 +14199,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -14212,7 +14212,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -14238,7 +14238,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -14251,7 +14251,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -14277,7 +14277,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },
@@ -14290,7 +14290,7 @@
       "gurobi_runtime_status": "observed",
       "gurobi_runtime_source": "historical_collaborator_archive",
       "time_limit_seconds": 900,
-      "time_limit_rule": "runtime <= infs -> 900s",
+      "time_limit_rule": "runtime > 300s -> 900s",
       "checker_accepted": true,
       "phase": "train"
     },

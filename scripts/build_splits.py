@@ -54,7 +54,7 @@ def write_json(path: Path, payload: object) -> None:
 
 def write_csv(path: Path, rows: list[dict], fields: list[str]) -> None:
     buffer = io.StringIO(newline="")
-    writer = csv.DictWriter(buffer, fieldnames=fields)
+    writer = csv.DictWriter(buffer, fieldnames=fields, lineterminator="\n")
     writer.writeheader()
     writer.writerows(rows)
     write_text(path, buffer.getvalue())
@@ -89,8 +89,9 @@ def time_limit(runtime_seconds: float | None, runtime_status: str) -> tuple[int,
         return 900, "timeout-censored or unavailable -> 900s"
     for upper, limit in TIME_LIMIT_TIERS:
         if runtime_seconds <= upper:
-            upper_label = "inf" if math.isinf(upper) else f"{upper:g}"
-            return limit, f"runtime <= {upper_label}s -> {limit}s"
+            if math.isinf(upper):
+                return limit, "runtime > 300s -> 900s"
+            return limit, f"runtime <= {upper:g}s -> {limit}s"
     raise AssertionError("unreachable")
 
 
