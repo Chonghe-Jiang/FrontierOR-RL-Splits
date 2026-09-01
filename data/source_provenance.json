@@ -1,6 +1,6 @@
 {
   "format": "frontieror-rl-split-provenance-v1",
-  "generated_at": "2026-09-01T01:00:29.139105+00:00",
+  "generated_at": "2026-09-01T00:17:02.027028+00:00",
   "source_dataset": "LeoJiangOR/FrontierOR-Audited-180",
   "source_revision": "a6fe77d0c79184bbea1e8f72ca6efd1a75eec1cf",
   "source_runtime_format": "frontieror-gurobi-runtime-metadata-v1",

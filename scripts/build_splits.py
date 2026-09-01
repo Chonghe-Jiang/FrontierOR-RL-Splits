@@ -14,7 +14,6 @@ import random
 import re
 import statistics
 from collections import Counter, defaultdict
-from datetime import datetime, timezone
 from pathlib import Path
 
 
@@ -331,7 +330,7 @@ def choose_task_partition(tasks: list[dict]) -> tuple[set[str], set[str], dict]:
     rationale = {
         "algorithm": "deterministic multi-start local search over stratification error",
         "seed": SEED,
-        "objective_score": best_score,
+        "objective_score": round(best_score, 12),
         "test_task_count": len(test_ids),
         "train_task_count": len(train_ids),
         "stratification_dimensions": [
@@ -693,7 +692,7 @@ def main() -> None:
 
     provenance = {
         "format": "frontieror-rl-split-provenance-v1",
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": runtime_payload["generated_at"],
         "source_dataset": SOURCE_REPO,
         "source_revision": SOURCE_REVISION,
         "source_runtime_format": runtime_payload["format"],
