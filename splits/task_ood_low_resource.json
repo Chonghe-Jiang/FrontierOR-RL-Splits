@@ -1,7 +1,7 @@
 {
   "id": "task_ood_low_resource",
   "title": "Task-OOD Low-Resource",
-  "question": "Can a policy transfer to unseen tasks with only two representative instances per task?",
+  "question": "Uses two instances per task to test transfer when training data is limited.",
   "train_rule": "Exactly one canonical small and one median-runtime large instance per train task",
   "test_rule": "The same two-instance selection rule on each held-out task",
   "summary": {
@@ -67,7 +67,7 @@
         "time_limit_seconds": 900
       }
     ],
-    "reason": "Coarse tiers avoid false precision across heterogeneous runtime sources while giving slower Gurobi instances more wall-clock budget."
+    "reason": "Broad tiers account for runtimes measured in different environments and give slower Gurobi instances more wall-clock time."
   },
   "format": "frontieror-rl-split-v1",
   "source_revision": "a6fe77d0c79184bbea1e8f72ca6efd1a75eec1cf",

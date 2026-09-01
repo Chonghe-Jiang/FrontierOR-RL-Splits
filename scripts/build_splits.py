@@ -430,7 +430,7 @@ def build_splits(
         {
             "id": "scale_ood",
             "title": "Scale-OOD",
-            "question": "Can a policy learned on small instances scale to large instances of the same tasks?",
+            "question": "Tests whether a policy trained on small instances can solve larger instances of the same tasks.",
             "train_rule": "All small instances from all 180 tasks",
             "test_rule": "All large instances from the same 180 tasks",
             "records": [
@@ -441,7 +441,7 @@ def build_splits(
         {
             "id": "task_ood_full",
             "title": "Task-OOD Full",
-            "question": "Can a policy transfer to unseen tasks when all available training instances are used?",
+            "question": "Tests transfer to unseen tasks after training on every available instance in the training partition.",
             "train_rule": "All available instances from the 150 train tasks",
             "test_rule": "All available instances from the 30 held-out tasks",
             "records": [
@@ -452,7 +452,7 @@ def build_splits(
         {
             "id": "task_ood_low_resource",
             "title": "Task-OOD Low-Resource",
-            "question": "Can a policy transfer to unseen tasks with only two representative instances per task?",
+            "question": "Uses two instances per task to test transfer when training data is limited.",
             "train_rule": "Exactly one canonical small and one median-runtime large instance per train task",
             "test_rule": "The same two-instance selection rule on each held-out task",
             "records": [
@@ -464,7 +464,7 @@ def build_splits(
         {
             "id": "joint_ood",
             "title": "Joint-OOD",
-            "question": "Can a policy generalize simultaneously to unseen tasks and larger instances?",
+            "question": "Combines both shifts: the test tasks are unseen, and their test instances are large.",
             "train_rule": "All small instances from the 150 train tasks",
             "test_rule": "All large instances from the 30 held-out tasks",
             "records": [
@@ -495,8 +495,8 @@ def build_splits(
                 {"gurobi_runtime_range": "> 300 seconds or timeout-censored", "time_limit_seconds": 900},
             ],
             "reason": (
-                "Coarse tiers avoid false precision across heterogeneous runtime sources while "
-                "giving slower Gurobi instances more wall-clock budget."
+                "Broad tiers account for runtimes measured in different environments and give "
+                "slower Gurobi instances more wall-clock time."
             ),
         }
     return definitions
@@ -599,47 +599,47 @@ def make_index(
 </head>
 <body><main>
   <header>
-    <div class="kicker">FrontierOR · RL evaluation protocol</div>
-    <h1>Four splits.<br>Two kinds of generalization.</h1>
-    <p class="lede">A reproducible train/test protocol for asking whether optimization agents generalize across instance scale, across problem tasks, or across both at once.</p>
+    <div class="kicker">FrontierOR · RL evaluation</div>
+    <h1>Train/test splits<br>for FrontierOR RL</h1>
+    <p class="lede">These four splits test whether an optimization agent transfers to larger instances, unseen tasks, or both.</p>
     <div class="stamp"><span>180 task directories</span><span>1,095 verified instances</span><span>150 / 30 task partition</span><span>≤ 15 min per run</span></div>
-    <div class="actions"><a class="button" href="https://huggingface.co/datasets/{SOURCE_REPO}">Open the dataset on Hugging Face</a><a class="button secondary" href="https://github.com/Chonghe-Jiang/FrontierOR-RL-Splits">View the GitHub repository</a></div>
+    <div class="actions"><a class="button" href="https://huggingface.co/datasets/{SOURCE_REPO}">View the data on Hugging Face</a><a class="button secondary" href="https://github.com/Chonghe-Jiang/FrontierOR-RL-Splits">View the split files on GitHub</a></div>
   </header>
 
   <section>
-    <h2>The evaluation matrix</h2>
+    <h2>What each split tests</h2>
     <div class="matrix">
       <div class="head"></div><div class="head">Small instance</div><div class="head">Large instance</div>
-      <div class="head">Seen task</div><div>Within-distribution control</div><div><strong>Scale-OOD</strong><br>same task, larger instance</div>
-      <div class="head">Unseen task</div><div><strong>Task-OOD</strong><br>new task, familiar scale mix</div><div><strong>Joint-OOD</strong><br>new task and larger instance</div>
+      <div class="head">Seen task</div><div>Training-distribution baseline</div><div><strong>Scale-OOD</strong><br>same task, larger instance</div>
+      <div class="head">Unseen task</div><div><strong>Task-OOD</strong><br>new task, comparable scale mix</div><div><strong>Joint-OOD</strong><br>new task and larger instance</div>
     </div>
   </section>
 
   <section>
-    <h2>Scale is not the same as a 3 / 2 replicate holdout</h2>
-    <p>Each standard task has one tiny instance and five nominally large replicas. The suffixes <code>large_1</code> through <code>large_5</code> identify replicas; they do not define five increasing scales. In a serialized-byte-size audit, only <strong>{replica_audit['byte_size_monotone_task_count']} of {replica_audit['complete_five_large_task_count']}</strong> complete tasks ({monotone_percent:.1f}%) increase monotonically from 1 to 5, and the median adjacent size ratio is {replica_audit['median_adjacent_byte_size_ratio']:.3f}.</p>
+    <h2>Why a 3 / 2 replica split is not Scale-OOD</h2>
+    <p>Most tasks have one tiny instance and five large replicas. The suffixes <code>large_1</code> through <code>large_5</code> label separate replicas, not five ordered scale levels. We checked serialized file size as a simple proxy. Only <strong>{replica_audit['byte_size_monotone_task_count']} of {replica_audit['complete_five_large_task_count']}</strong> complete tasks ({monotone_percent:.1f}%) grow monotonically from 1 to 5, and the median ratio between adjacent files is {replica_audit['median_adjacent_byte_size_ratio']:.3f}.</p>
     <div class="compare">
-      <article class="card"><div class="eyebrow">Published protocol</div><h3>True Scale-OOD</h3><p>Train on tiny instances and test on large instances of the same tasks. This measures extrapolation across the explicit small/large boundary.</p></article>
-      <article class="card"><div class="eyebrow">Optional custom protocol</div><h3>Large-replica holdout 3 / 2</h3><p>Train on three large replicas and test on two other large replicas. This is useful, but it measures held-out-instance or random-seed generalization—not scale extrapolation.</p></article>
+      <article class="card"><div class="eyebrow">Published split</div><h3>Scale-OOD</h3><p>Train on tiny instances and test on large instances of the same tasks. This uses the dataset's explicit small/large boundary.</p></article>
+      <article class="card"><div class="eyebrow">Optional split</div><h3>Large-replica holdout 3 / 2</h3><p>Train on three large replicas and test on two others. This tests transfer to held-out replicas or random seeds. It does not test scale extrapolation.</p></article>
     </div>
-    <p class="callout"><strong>Dataset exception:</strong> <code>segundo2019</code> retains only <code>large_1</code>, <code>large_2</code>, and <code>large_5</code>. An exact 3/2 large-only protocol therefore covers 179 complete tasks; retaining all 180 requires a documented proportional 2/1 exception.</p>
+    <p class="callout"><strong>One exception:</strong> <code>segundo2019</code> has only <code>large_1</code>, <code>large_2</code>, and <code>large_5</code>. An exact 3/2 large-only split therefore covers 179 tasks. To retain all 180, use a documented 2/1 split for this task.</p>
   </section>
 
-  <section><h2>The four published splits</h2><div class="grid">{''.join(cards)}</div></section>
+  <section><h2>Four ready-to-use splits</h2><div class="grid">{''.join(cards)}</div></section>
 
   <section>
-    <h2>How the 150 / 30 task boundary was chosen</h2>
-    <p>The 30 held-out tasks are not a random sample. A deterministic local-search partition balances category, formulation, application field, optimization direction, runtime quartile, model-size quartile, publication era, and sufficiently represented problem classes.</p>
-    <div class="callout"><strong>Leakage guard:</strong> <code>earl2005</code> and its legacy alias <code>ostrowski2012</code> are forced into train together. The release has 180 directories but 179 independent benchmark identities.</div>
+    <h2>How we chose the 30 test tasks</h2>
+    <p>We used a deterministic search instead of drawing 30 tasks at random. The search balances category, formulation, application field, optimization direction, runtime quartile, model-size quartile, publication era, and problem classes with enough examples to split.</p>
+    <div class="callout"><strong>Leakage control:</strong> <code>earl2005</code> and its legacy alias <code>ostrowski2012</code> stay together in train. The release has 180 directories and 179 independent benchmark identities.</div>
     <p><a href="splits/task_partition.json">Full partition rationale and balance table</a> · Test preview: {', '.join(html.escape(row['case_id']) for row in test_preview[:8])}…</p>
     <details><summary>Selected balance table</summary><div class="table-wrap"><table><thead><tr><th>Dimension</th><th>Value</th><th>All</th><th>Train</th><th>Test</th></tr></thead><tbody>{balance_rows}</tbody></table></div></details>
   </section>
 
   <section>
-    <h2>Runtime-aware limits</h2>
-    <p>Every instance receives the same limit wherever it appears, whether in train or test. Coarse tiers are intentional: the runtime metadata combines exact current reruns and historical measurements from different environments, so fine-grained scaling would imply false precision.</p>
-    <div class="tiers"><div class="tier"><b>60s</b>Gurobi ≤ 5s</div><div class="tier"><b>120s</b>5–30s</div><div class="tier"><b>300s</b>30–120s</div><div class="tier"><b>600s</b>120–300s</div><div class="tier"><b>900s</b>&gt;300s or censored</div></div>
-    <p class="callout"><strong>Hard rule:</strong> no single training rollout or evaluation attempt may exceed 900 seconds (15 minutes). Report aggregate compute separately; the manifests include serial upper bounds for planning.</p>
+    <h2>Runtime-based limits</h2>
+    <p>Each instance keeps the same limit in every split. We use broad brackets because the timing data includes current reruns and historical runs from different systems. Treating those measurements as one precise speed benchmark would be misleading.</p>
+    <div class="tiers"><div class="tier"><b>60s</b>Gurobi ≤ 5s</div><div class="tier"><b>120s</b>5 to 30s</div><div class="tier"><b>300s</b>30 to 120s</div><div class="tier"><b>600s</b>120 to 300s</div><div class="tier"><b>900s</b>&gt;300s or censored</div></div>
+    <p class="callout"><strong>Maximum:</strong> one training rollout or evaluation attempt may run for at most 900 seconds (15 minutes). The manifests also report serial upper bounds for compute planning.</p>
     <p><a href="splits/time_limits.csv">Download all 1,095 instance limits</a></p>
   </section>
 
@@ -651,23 +651,23 @@ def make_index(
   </section>
 
   <section>
-    <h2>You can define your own split</h2>
-    <p>The four manifests are recommended evaluation protocols, not restrictions. Every row in <a href="splits/time_limits.csv"><code>splits/time_limits.csv</code></a> includes the task ID, instance, small/large label, Gurobi runtime provenance, checker status, and runtime-aware execution cap. Combine it with <a href="data/task_catalog.csv"><code>data/task_catalog.csv</code></a> to split by problem class, formulation, application, publication era, difficulty, or a custom task list.</p>
-    <p>For a deterministic three-train/two-test split of the five large replicas:</p>
+    <h2>Create another split</h2>
+    <p>The four manifests are defaults. The source tables contain enough information to create a different split. <a href="splits/time_limits.csv"><code>splits/time_limits.csv</code></a> records the task, instance, scale label, Gurobi runtime source, checker status, and execution limit. <a href="data/task_catalog.csv"><code>data/task_catalog.csv</code></a> adds problem class, formulation, application, year, and difficulty.</p>
+    <p>This command creates a deterministic 3/2 split of the five large replicas:</p>
     <pre><code>python examples/make_custom_split.py \\
   --train-count 3 --test-count 2 \\
   --incomplete-policy proportional \\
   --output my_large_replica_split.csv</code></pre>
-    <p>Use <code>--incomplete-policy skip</code> for an exact 3/2 protocol over the 179 complete tasks, or <code>proportional</code> to retain <code>segundo2019</code> as a documented 2/1 exception. The script uses a fixed hash seed, so independent users obtain the same assignment.</p>
-    <div class="actions"><a class="button" href="examples/make_custom_split.py">Download the custom split script</a><a class="button secondary" href="https://huggingface.co/datasets/{SOURCE_REPO}/tree/{SOURCE_REVISION}">Browse the pinned Hugging Face revision</a></div>
+    <p>Choose <code>--incomplete-policy skip</code> for an exact 3/2 split over 179 tasks. Choose <code>proportional</code> to retain <code>segundo2019</code> with the 2/1 exception described above. A fixed hash seed makes the assignment reproducible.</p>
+    <div class="actions"><a class="button" href="examples/make_custom_split.py">Download the split script</a><a class="button secondary" href="https://huggingface.co/datasets/{SOURCE_REPO}/tree/{SOURCE_REVISION}">View the pinned Hugging Face revision</a></div>
   </section>
 
   <section>
-    <h2>Reproducibility</h2>
-    <p>Source dataset: <a href="https://huggingface.co/datasets/{SOURCE_REPO}/tree/{SOURCE_REVISION}">{SOURCE_REPO}@{SOURCE_REVISION[:12]}</a>. All 1,095 reference solutions pass their checker. Runtime source provenance is retained in every row.</p>
-    <p>Rebuild with <code>python scripts/build_splits.py</code>; verify with <code>python scripts/validate_splits.py</code>. Generated-file hashes are recorded in <a href="MANIFEST.sha256">MANIFEST.sha256</a>.</p>
+    <h2>Data and reproducibility</h2>
+    <p>The splits use <a href="https://huggingface.co/datasets/{SOURCE_REPO}/tree/{SOURCE_REVISION}">{SOURCE_REPO}@{SOURCE_REVISION[:12]}</a>. All 1,095 reference solutions pass their checker, and every row keeps the source of its runtime measurement.</p>
+    <p>Run <code>python scripts/build_splits.py</code> to rebuild the files and <code>python scripts/validate_splits.py</code> to check them. <a href="MANIFEST.sha256">MANIFEST.sha256</a> contains the generated-file hashes.</p>
   </section>
-  <footer>FrontierOR RL Splits · deterministic seed {SEED} · generated from immutable source revision {SOURCE_REVISION[:12]}</footer>
+  <footer>FrontierOR RL Splits · seed {SEED} · source revision {SOURCE_REVISION[:12]}</footer>
 </main>
 <script>
 const tasks={task_json}; const splitSummary={split_json};

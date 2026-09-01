@@ -1,7 +1,7 @@
 {
   "id": "scale_ood",
   "title": "Scale-OOD",
-  "question": "Can a policy learned on small instances scale to large instances of the same tasks?",
+  "question": "Tests whether a policy trained on small instances can solve larger instances of the same tasks.",
   "train_rule": "All small instances from all 180 tasks",
   "test_rule": "All large instances from the same 180 tasks",
   "summary": {
@@ -67,7 +67,7 @@
         "time_limit_seconds": 900
       }
     ],
-    "reason": "Coarse tiers avoid false precision across heterogeneous runtime sources while giving slower Gurobi instances more wall-clock budget."
+    "reason": "Broad tiers account for runtimes measured in different environments and give slower Gurobi instances more wall-clock time."
   },
   "format": "frontieror-rl-split-v1",
   "source_revision": "a6fe77d0c79184bbea1e8f72ca6efd1a75eec1cf",
