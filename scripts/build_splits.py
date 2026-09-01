@@ -11,6 +11,7 @@ import io
 import json
 import math
 import random
+import re
 import statistics
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
@@ -82,6 +83,45 @@ def bin_value(value: float, boundaries: list[float]) -> str:
 
 def instance_scale(instance_name: str) -> str:
     return "small" if instance_name.startswith("tiny_instance") else "large"
+
+
+def large_replica_audit(dataset_root: Path) -> dict:
+    complete = 0
+    byte_monotone = 0
+    adjacent_ratios: list[float] = []
+    incomplete = []
+    for case_dir in sorted(
+        path for path in dataset_root.iterdir() if path.is_dir() and (path / "instance").is_dir()
+    ):
+        values = []
+        for path in (case_dir / "instance").glob("large_instance*.json"):
+            match = re.fullmatch(r"large_instance_(\d+)\.json", path.name)
+            if match is None:
+                continue
+            raw = int(match.group(1))
+            slot = raw // 10 if raw in {11, 21, 31, 41, 51} else raw
+            values.append((slot, path.stat().st_size, path.name))
+        values.sort()
+        if len(values) == 5:
+            complete += 1
+            byte_monotone += all(values[i][1] <= values[i + 1][1] for i in range(4))
+            adjacent_ratios.extend(
+                values[i + 1][1] / max(1, values[i][1]) for i in range(4)
+            )
+        else:
+            incomplete.append(
+                {"case_id": case_dir.name, "large_instances": [value[2] for value in values]}
+            )
+    return {
+        "complete_five_large_task_count": complete,
+        "byte_size_monotone_task_count": byte_monotone,
+        "byte_size_monotone_fraction": byte_monotone / complete,
+        "median_adjacent_byte_size_ratio": statistics.median(adjacent_ratios),
+        "incomplete_large_replica_tasks": incomplete,
+        "interpretation": (
+            "large_1 through large_5 are replicate identifiers, not a reliable increasing-size axis"
+        ),
+    }
 
 
 def time_limit(runtime_seconds: float | None, runtime_status: str) -> tuple[int, str]:
@@ -492,7 +532,9 @@ def task_catalog(tasks: list[dict], train_tasks: set[str]) -> list[dict]:
     return rows
 
 
-def make_index(split_defs: list[dict], catalog: list[dict], rationale: dict) -> str:
+def make_index(
+    split_defs: list[dict], catalog: list[dict], rationale: dict, replica_audit: dict
+) -> str:
     cards = []
     for split in split_defs:
         train = split["summary"]["train"]
@@ -514,6 +556,7 @@ def make_index(split_defs: list[dict], catalog: list[dict], rationale: dict) -> 
         [{"id": s["id"], "title": s["title"], "summary": s["summary"]} for s in split_defs]
     )
     test_preview = [row for row in catalog if row["partition"] == "test"]
+    monotone_percent = 100 * replica_audit["byte_size_monotone_fraction"]
     balance_rows = "".join(
         f"<tr><td>{html.escape(row['dimension'])}</td><td>{html.escape(row['value'])}</td>"
         f"<td>{row['all_tasks']}</td><td>{row['train_tasks']}</td><td>{row['test_tasks']}</td></tr>"
@@ -536,6 +579,7 @@ def make_index(split_defs: list[dict], catalog: list[dict], rationale: dict) -> 
     h1 {{ font-family:Georgia,serif; font-size:clamp(2.6rem,7vw,5.8rem); line-height:.94; margin:.2em 0; letter-spacing:-.045em; }}
     h2 {{ font:700 clamp(1.8rem,4vw,3rem)/1.1 Georgia,serif; margin:0 0 20px; }} h3 {{ margin:.25rem 0 .65rem; font-size:1.35rem; }}
     .lede {{ color:var(--muted); max-width:760px; font-size:1.15rem; }}
+    .actions {{ display:flex; flex-wrap:wrap; gap:10px; margin-top:24px; }} .button {{ display:inline-block; text-decoration:none; border-radius:9px; padding:10px 14px; background:var(--blue); color:white; font-weight:750; }} .button.secondary {{ background:transparent; color:var(--blue); border:1px solid var(--blue); }}
     .stamp {{ display:inline-flex; gap:10px; flex-wrap:wrap; margin-top:18px; }} .stamp span {{ border:1px solid var(--line); border-radius:99px; padding:6px 12px; background:var(--panel); }}
     section {{ padding:52px 0 12px; }} .grid {{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }}
     .card {{ background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:22px; box-shadow:0 8px 26px #473c2c0b; }}
@@ -544,12 +588,14 @@ def make_index(split_defs: list[dict], catalog: list[dict], rationale: dict) -> 
     .matrix {{ display:grid; grid-template-columns:160px repeat(2,1fr); border:1px solid var(--line); border-radius:14px; overflow:hidden; background:var(--panel); }}
     .matrix > div {{ padding:16px; border-right:1px solid var(--line); border-bottom:1px solid var(--line); }} .matrix .head {{ font-weight:800; background:#e8e2d8; }}
     .callout {{ border-left:5px solid var(--orange); padding:16px 20px; background:#fff6ed; border-radius:0 12px 12px 0; }}
+    .compare {{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }} .compare article {{ border-top:5px solid var(--green); }} .compare article:last-child {{ border-top-color:var(--orange); }}
+    pre {{ overflow:auto; padding:18px; border-radius:12px; background:#17212b; color:#edf5f2; font-size:.86rem; }} code {{ font-family:ui-monospace,SFMono-Regular,Menlo,monospace; }}
     .tiers {{ display:grid; grid-template-columns:repeat(5,1fr); gap:10px; }} .tier {{ padding:15px; border-radius:12px; background:var(--panel); border:1px solid var(--line); }} .tier b {{ display:block; font-size:1.55rem; color:var(--green); }}
     .controls {{ display:flex; gap:10px; flex-wrap:wrap; margin-bottom:14px; }} input,select {{ padding:10px 12px; border:1px solid var(--line); border-radius:8px; background:white; font:inherit; }} input {{ min-width:280px; }}
     .table-wrap {{ overflow:auto; border:1px solid var(--line); border-radius:12px; background:white; max-height:560px; }} table {{ border-collapse:collapse; width:100%; font-size:.88rem; }} th,td {{ padding:9px 11px; border-bottom:1px solid #eee8dd; text-align:left; white-space:nowrap; }} th {{ position:sticky; top:0; background:#ece7dd; z-index:1; }}
     .pill {{ padding:3px 8px; border-radius:99px; font-weight:700; }} .train {{ background:#e3f0e8; color:#245a3f; }} .test {{ background:#fde6db; color:#8b3f20; }}
     footer {{ color:var(--muted); padding-top:48px; }}
-    @media(max-width:760px) {{ .grid {{ grid-template-columns:1fr; }} .tiers {{ grid-template-columns:repeat(2,1fr); }} .matrix {{ grid-template-columns:110px repeat(2,1fr); font-size:.86rem; }} }}
+    @media(max-width:760px) {{ .grid,.compare {{ grid-template-columns:1fr; }} .tiers {{ grid-template-columns:repeat(2,1fr); }} .matrix {{ grid-template-columns:110px repeat(2,1fr); font-size:.86rem; }} }}
   </style>
 </head>
 <body><main>
@@ -558,6 +604,7 @@ def make_index(split_defs: list[dict], catalog: list[dict], rationale: dict) -> 
     <h1>Four splits.<br>Two kinds of generalization.</h1>
     <p class="lede">A reproducible train/test protocol for asking whether optimization agents generalize across instance scale, across problem tasks, or across both at once.</p>
     <div class="stamp"><span>180 task directories</span><span>1,095 verified instances</span><span>150 / 30 task partition</span><span>≤ 15 min per run</span></div>
+    <div class="actions"><a class="button" href="https://huggingface.co/datasets/{SOURCE_REPO}">Open the dataset on Hugging Face</a><a class="button secondary" href="https://github.com/Chonghe-Jiang/FrontierOR-RL-Splits">View the GitHub repository</a></div>
   </header>
 
   <section>
@@ -567,6 +614,16 @@ def make_index(split_defs: list[dict], catalog: list[dict], rationale: dict) -> 
       <div class="head">Seen task</div><div>Within-distribution control</div><div><strong>Scale-OOD</strong><br>same task, larger instance</div>
       <div class="head">Unseen task</div><div><strong>Task-OOD</strong><br>new task, familiar scale mix</div><div><strong>Joint-OOD</strong><br>new task and larger instance</div>
     </div>
+  </section>
+
+  <section>
+    <h2>Scale is not the same as a 3 / 2 replicate holdout</h2>
+    <p>Each standard task has one tiny instance and five nominally large replicas. The suffixes <code>large_1</code> through <code>large_5</code> identify replicas; they do not define five increasing scales. In a serialized-byte-size audit, only <strong>{replica_audit['byte_size_monotone_task_count']} of {replica_audit['complete_five_large_task_count']}</strong> complete tasks ({monotone_percent:.1f}%) increase monotonically from 1 to 5, and the median adjacent size ratio is {replica_audit['median_adjacent_byte_size_ratio']:.3f}.</p>
+    <div class="compare">
+      <article class="card"><div class="eyebrow">Published protocol</div><h3>True Scale-OOD</h3><p>Train on tiny instances and test on large instances of the same tasks. This measures extrapolation across the explicit small/large boundary.</p></article>
+      <article class="card"><div class="eyebrow">Optional custom protocol</div><h3>Large-replica holdout 3 / 2</h3><p>Train on three large replicas and test on two other large replicas. This is useful, but it measures held-out-instance or random-seed generalization—not scale extrapolation.</p></article>
+    </div>
+    <p class="callout"><strong>Dataset exception:</strong> <code>segundo2019</code> retains only <code>large_1</code>, <code>large_2</code>, and <code>large_5</code>. An exact 3/2 large-only protocol therefore covers 179 complete tasks; retaining all 180 requires a documented proportional 2/1 exception.</p>
   </section>
 
   <section><h2>The four published splits</h2><div class="grid">{''.join(cards)}</div></section>
@@ -595,6 +652,18 @@ def make_index(split_defs: list[dict], catalog: list[dict], rationale: dict) -> 
   </section>
 
   <section>
+    <h2>You can define your own split</h2>
+    <p>The four manifests are recommended evaluation protocols, not restrictions. Every row in <a href="splits/time_limits.csv"><code>splits/time_limits.csv</code></a> includes the task ID, instance, small/large label, Gurobi runtime provenance, checker status, and runtime-aware execution cap. Combine it with <a href="data/task_catalog.csv"><code>data/task_catalog.csv</code></a> to split by problem class, formulation, application, publication era, difficulty, or a custom task list.</p>
+    <p>For a deterministic three-train/two-test split of the five large replicas:</p>
+    <pre><code>python examples/make_custom_split.py \\
+  --train-count 3 --test-count 2 \\
+  --incomplete-policy proportional \\
+  --output my_large_replica_split.csv</code></pre>
+    <p>Use <code>--incomplete-policy skip</code> for an exact 3/2 protocol over the 179 complete tasks, or <code>proportional</code> to retain <code>segundo2019</code> as a documented 2/1 exception. The script uses a fixed hash seed, so independent users obtain the same assignment.</p>
+    <div class="actions"><a class="button" href="examples/make_custom_split.py">Download the custom split script</a><a class="button secondary" href="https://huggingface.co/datasets/{SOURCE_REPO}/tree/{SOURCE_REVISION}">Browse the pinned Hugging Face revision</a></div>
+  </section>
+
+  <section>
     <h2>Reproducibility</h2>
     <p>Source dataset: <a href="https://huggingface.co/datasets/{SOURCE_REPO}/tree/{SOURCE_REVISION}">{SOURCE_REPO}@{SOURCE_REVISION[:12]}</a>. All 1,095 reference solutions pass their checker. Runtime source provenance is retained in every row.</p>
     <p>Rebuild with <code>python scripts/build_splits.py</code>; verify with <code>python scripts/validate_splits.py</code>. Generated-file hashes are recorded in <a href="MANIFEST.sha256">MANIFEST.sha256</a>.</p>
@@ -620,6 +689,7 @@ def main() -> None:
     instances = prepare_instances(runtime_records)
     splits = build_splits(instances, train_tasks, test_tasks)
     catalog = task_catalog(tasks, train_tasks)
+    replica_audit = large_replica_audit(args.dataset_root.resolve())
 
     provenance = {
         "format": "frontieror-rl-split-provenance-v1",
@@ -629,6 +699,7 @@ def main() -> None:
         "source_runtime_format": runtime_payload["format"],
         "source_runtime_summary": runtime_payload["summary"],
         "builder_seed": SEED,
+        "large_replica_audit": replica_audit,
     }
     write_json(root / "data/source_provenance.json", provenance)
 
@@ -688,7 +759,7 @@ def main() -> None:
 
     time_fields = [field for field in instance_fields if field != "phase"]
     write_csv(root / "splits/time_limits.csv", instances, time_fields)
-    write_text(root / "index.html", make_index(splits, catalog, rationale))
+    write_text(root / "index.html", make_index(splits, catalog, rationale, replica_audit))
 
     generated = sorted(
         path

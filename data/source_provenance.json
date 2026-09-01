@@ -1,6 +1,6 @@
 {
   "format": "frontieror-rl-split-provenance-v1",
-  "generated_at": "2026-09-01T00:45:37.442691+00:00",
+  "generated_at": "2026-09-01T01:00:29.139105+00:00",
   "source_dataset": "LeoJiangOR/FrontierOR-Audited-180",
   "source_revision": "a6fe77d0c79184bbea1e8f72ca6efd1a75eec1cf",
   "source_runtime_format": "frontieror-gurobi-runtime-metadata-v1",
@@ -53,5 +53,22 @@
       "raw_archive_value": "time_out"
     }
   },
-  "builder_seed": 20260831
+  "builder_seed": 20260831,
+  "large_replica_audit": {
+    "complete_five_large_task_count": 179,
+    "byte_size_monotone_task_count": 6,
+    "byte_size_monotone_fraction": 0.0335195530726257,
+    "median_adjacent_byte_size_ratio": 1.0,
+    "incomplete_large_replica_tasks": [
+      {
+        "case_id": "segundo2019",
+        "large_instances": [
+          "large_instance_1.json",
+          "large_instance_2.json",
+          "large_instance_5.json"
+        ]
+      }
+    ],
+    "interpretation": "large_1 through large_5 are replicate identifiers, not a reliable increasing-size axis"
+  }
 }

@@ -32,6 +32,14 @@ def load_json(path: Path) -> dict:
 
 
 def main() -> None:
+    provenance = load_json(ROOT / "data/source_provenance.json")
+    replica_audit = provenance["large_replica_audit"]
+    assert replica_audit["complete_five_large_task_count"] == 179
+    assert replica_audit["byte_size_monotone_task_count"] == 6
+    assert [row["case_id"] for row in replica_audit["incomplete_large_replica_tasks"]] == [
+        "segundo2019"
+    ]
+
     partition = load_json(ROOT / "splits/task_partition.json")
     train_tasks = set(partition["train_tasks"])
     test_tasks = set(partition["test_tasks"])
@@ -110,6 +118,7 @@ def main() -> None:
     print("task partition: 150 train / 30 test; no alias or type leakage")
     print("instance universe: 1,095 checker-accepted pairs")
     print("time limits: {60, 120, 300, 600, 900}; hard maximum 900 seconds")
+    print("large replicas: 179 complete 5-replica tasks; 3/2 is instance holdout, not scale OOD")
     for split_id in SPLIT_IDS:
         summary = loaded[split_id]["summary"]
         print(

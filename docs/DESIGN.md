@@ -17,6 +17,11 @@ make those outcomes distinguishable.
 This is not a new-task test. It intentionally asks whether experience acquired from
 small examples of a known problem transfers to computationally larger examples.
 
+The five files named `large_1` through `large_5` are same-scale replicas rather than a
+reliable increasing-size sequence. Splitting them three for training and two for test is
+a useful held-out-instance protocol, but should be labeled **large-replica holdout 3/2**,
+not Scale-OOD. The included `examples/make_custom_split.py` builds this optional split.
+
 ### 2. Task-OOD Full
 
 - Train: all 914 available instances in 150 train tasks.

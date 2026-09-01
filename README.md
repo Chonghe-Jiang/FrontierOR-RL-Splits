@@ -5,6 +5,8 @@ Four reproducible train/test protocols for reinforcement-learning experiments on
 
 Open **[the visual guide](https://chonghe-jiang.github.io/FrontierOR-RL-Splits/)**
 for the motivation, task-partition rationale, exact instance counts, and runtime policy.
+The guide also explains why a three-train/two-test split across the five large replicas
+is an instance holdout rather than strict Scale-OOD, and shows how to build custom splits.
 
 ## Published protocols
 
@@ -36,6 +38,7 @@ instead of false precision.
 - `splits/task_partition.*`: the fixed 150/30 task boundary and rationale.
 - `splits/time_limits.csv`: role-independent time limits for all 1,095 instances.
 - `data/task_catalog.csv`: task taxonomy, split assignment, and difficulty bins.
+- `examples/make_custom_split.py`: deterministic large-replica 3/2 split generator.
 - `MANIFEST.sha256`: hashes of every generated artifact.
 
 ## Rebuild and validate

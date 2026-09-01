@@ -13,3 +13,5 @@ jobs:
         with:
           python-version: "3.12"
       - run: python scripts/validate_splits.py
+      - name: Smoke-test custom 3/2 split generator
+        run: python examples/make_custom_split.py --output /tmp/custom_split.csv
