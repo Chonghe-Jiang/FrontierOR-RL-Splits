@@ -24,7 +24,7 @@ bodur2017,train,bodur2017,Stochastic / Robust / Bilevel Optimization,Stochastic/
 boland2019,test,boland2019,Facility Location,MIP,Supply Chain & Inventory,planning,min,Q3,Q2
 bollapragada2001,train,bollapragada2001,Other (Structural Design),MIP,Foundational / Theoretical,planning,min,Q3,Q2
 borndorfer2007,train,borndorfer2007,Other (Line Planning),IP,Public Transit & Mobility,planning,min,Q4,Q3
-bragin2022,train,bragin2022,Other (General MIP),MIP,Foundational / Theoretical,planning,min,Q1,Q2
+bragin2022,holdout,bragin2022,Other (General MIP),MIP,Foundational / Theoretical,planning,min,Q1,Q2
 brandao2016,train,brandao2016,Packing / Cutting Stock,IP,Foundational / Theoretical,planning,min,Q1,Q2
 bront2009,train,bront2009,Other (Revenue Management),IP,Retail & Revenue Management,strategic,max,Q2,Q1
 buchheim2018,test,buchheim2018,Other (Quadratic Optimization),QP/MIQP,Foundational / Theoretical,planning,min,Q3,Q1
@@ -41,22 +41,22 @@ cherkesly2015,train,cherkesly2015,Vehicle Routing & TSP,MIP,Transportation & Log
 colombi2017,test,colombi2017,Vehicle Routing & TSP,MIP,Transportation & Logistics,operational,max,Q3,Q2
 contreras2011,train,contreras2011,Facility Location,MIP,Transportation & Logistics,planning,min,Q2,Q4
 cordeau2006,train,cordeau2006,Vehicle Routing & TSP,MIP,Public Transit & Mobility,operational,min,Q3,Q2
-cordeau2014,train,cordeau2014,Vehicle Routing & TSP,MIP,Transportation & Logistics,operational,min,Q4,Q1
+cordeau2014,holdout,cordeau2014,Vehicle Routing & TSP,MIP,Transportation & Logistics,operational,min,Q4,Q1
 cordeau2019,train,cordeau2019,Facility Location,MIP,Public Service & Government,planning,min,Q2,Q3
 cote2018,train,cote2018,Packing / Cutting Stock,BIP,Foundational / Theoretical,planning,min,Q1,Q3
 cote2019,train,cote2019,Vehicle Routing & TSP,Stochastic/Robust/DRO,Transportation & Logistics,operational,min,Q2,Q1
 cunha2021,train,cunha2021,Lot Sizing / Inventory,MIP,Supply Chain & Inventory,planning,min,Q3,Q2
-damcikurt2016,train,damcikurt2016,Energy & Unit Commitment,Stochastic/Robust/DRO,Energy & Power Systems,operational,max,Q2,Q4
-dayarian2019,train,dayarian2019,Vehicle Routing & TSP,MIP,Transportation & Logistics,operational,min,Q3,Q2
+damcikurt2016,holdout,damcikurt2016,Energy & Unit Commitment,Stochastic/Robust/DRO,Energy & Power Systems,operational,max,Q2,Q4
+dayarian2019,holdout,dayarian2019,Vehicle Routing & TSP,MIP,Transportation & Logistics,operational,min,Q3,Q2
 degraeve2007,train,degraeve2007,Lot Sizing / Inventory,MIP,Manufacturing & Production,planning,min,Q1,Q1
 delage2022,test,delage2022,Packing / Cutting Stock,CP,Manufacturing & Production,strategic,min,Q3,Q2
-delorme2020,train,delorme2020,Packing / Cutting Stock,IP,Foundational / Theoretical,planning,min,Q2,Q3
+delorme2020,holdout,delorme2020,Packing / Cutting Stock,IP,Foundational / Theoretical,planning,min,Q2,Q3
 desaulniers2010,train,desaulniers2010,Vehicle Routing & TSP,MIP,Transportation & Logistics,operational,min,Q4,Q3
 desaulniers2014,train,desaulniers2014,Lot Sizing / Inventory,MIP,Supply Chain & Inventory,operational,min,Q3,Q2
 desaulniers2016,train,desaulniers2016,Lot Sizing / Inventory,MIP,Supply Chain & Inventory,operational,min,Q3,Q3
 dienstknecht2024,train,dienstknecht2024,Other (Resource Assignment),MIP,Manufacturing & Production,strategic,min,Q1,Q2
 earl2005,train,earl2005,Other (Cooperative Control),MIP,Aerospace & Aviation,operational,min,Q2,Q3
-eiselt2009,train,eiselt2009,Facility Location,MIP,Aerospace & Aviation,planning,max,Q4,Q4
+eiselt2009,holdout,eiselt2009,Facility Location,MIP,Aerospace & Aviation,planning,max,Q4,Q4
 elci2022,train,elci2022,Scheduling (Machine / Crew / Workforce),Stochastic/Robust/DRO,Manufacturing & Production,strategic,min,Q3,Q4
 engineer2012,test,engineer2012,Lot Sizing / Inventory,MIP,Supply Chain & Inventory,operational,min,Q2,Q2
 fischetti1997,test,fischetti1997,Vehicle Routing & TSP,IP,Transportation & Logistics,operational,min,Q4,Q3
@@ -64,7 +64,7 @@ fischetti1998,train,fischetti1998,Vehicle Routing & TSP,IP,Transportation & Logi
 fischetti2017,train,fischetti2017,Facility Location,MIP,Transportation & Logistics,planning,min,Q3,Q4
 fleszar2022b,train,fleszar2022b,Packing / Cutting Stock,QP/MIQP,Foundational / Theoretical,planning,max,Q3,Q1
 forrest2006,train,forrest2006,Other (Knapsack),IP,Manufacturing & Production,strategic,max,Q2,Q3
-fragkos2016,train,fragkos2016,Lot Sizing / Inventory,MIP,Manufacturing & Production,strategic,min,Q3,Q1
+fragkos2016,holdout,fragkos2016,Lot Sizing / Inventory,MIP,Manufacturing & Production,strategic,min,Q3,Q1
 fragkos2021,train,fragkos2021,Facility Location,Stochastic/Robust/DRO,Transportation & Logistics,planning,min,Q3,Q1
 freeman2018,train,freeman2018,Vehicle Routing & TSP,MIP,Sports & Entertainment,strategic,max,Q1,Q4
 freling2003,train,freling2003,Facility Location,MIP,Manufacturing & Production,strategic,min,Q1,Q1
@@ -85,11 +85,11 @@ hassannayebi2016,train,hassannayebi2016,Vehicle Scheduling,MIP,Public Transit & 
 he2020,test,he2020,Vehicle Routing & TSP,MIP,Transportation & Logistics,operational,min,Q4,Q2
 hewitt2024,train,hewitt2024,Stochastic / Robust / Bilevel Optimization,Stochastic/Robust/DRO,Manufacturing & Production,strategic,max,Q4,Q4
 hoffman1993,train,hoffman1993,Scheduling (Machine / Crew / Workforce),MIP,Aerospace & Aviation,strategic,min,Q2,Q1
-hosseinian2020,train,hosseinian2020,Graph Optimization,MIP,Foundational / Theoretical,planning,max,Q4,Q3
+hosseinian2020,holdout,hosseinian2020,Graph Optimization,MIP,Foundational / Theoretical,planning,max,Q4,Q3
 huisman2005,train,huisman2005,Vehicle Scheduling,MIP,Public Transit & Mobility,operational,min,Q1,Q2
 ji2019,test,ji2019,Other (Container Terminal),MIP,Transportation & Logistics,strategic,min,Q3,Q2
 juvin2023,train,juvin2023,Scheduling (Machine / Crew / Workforce),CP,Manufacturing & Production,operational,min,Q1,Q3
-kang2021,train,kang2021,Vehicle Routing & TSP,MIP,Transportation & Logistics,operational,min,Q3,Q2
+kang2021,holdout,kang2021,Vehicle Routing & TSP,MIP,Transportation & Logistics,operational,min,Q3,Q2
 klose2005,test,klose2005,Facility Location,MIP,Transportation & Logistics,planning,min,Q3,Q4
 knueven2020,train,knueven2020,Energy & Unit Commitment,MIP,Energy & Power Systems,operational,min,Q2,Q4
 kobayashi2021,train,kobayashi2021,Portfolio Optimization,Bilevel/Multi-level,Finance & Investment,strategic,min,Q1,Q2
@@ -99,10 +99,10 @@ kowalczyk2024,test,kowalczyk2024,Scheduling (Machine / Crew / Workforce),IP,Manu
 kress2019,train,kress2019,Other (Container Terminal),IP,Transportation & Logistics,strategic,min,Q3,Q3
 kreter2018,train,kreter2018,Other (Project Scheduling),MIP,Manufacturing & Production,planning,min,Q4,Q3
 lai2021,train,lai2021,Other (Grouping / Partitioning),MIP,Foundational / Theoretical,planning,max,Q4,Q1
-laporte2003,train,laporte2003,Vehicle Routing & TSP,IP,Transportation & Logistics,operational,min,Q2,Q2
+laporte2003,holdout,laporte2003,Vehicle Routing & TSP,IP,Transportation & Logistics,operational,min,Q2,Q2
 lee1996,train,lee1996,Graph Optimization,IP,Telecommunications & Networking,planning,min,Q1,Q2
 legrain2020,test,legrain2020,Scheduling (Machine / Crew / Workforce),IP,Healthcare,strategic,min,Q4,Q4
-legrain2024,train,legrain2024,Scheduling (Machine / Crew / Workforce),IP,Healthcare,strategic,min,Q3,Q3
+legrain2024,holdout,legrain2024,Scheduling (Machine / Crew / Workforce),IP,Healthcare,strategic,min,Q3,Q3
 letelier2022,train,letelier2022,Packing / Cutting Stock,BIP,Transportation & Logistics,planning,min,Q4,Q3
 levin2017,train,levin2017,Vehicle Routing & TSP,NLP/MINLP,Transportation & Logistics,operational,min,Q2,Q4
 li2020,train,li2020,Stochastic / Robust / Bilevel Optimization,Bilevel/Multi-level,Public Service & Government,planning,max,Q3,Q2
@@ -133,24 +133,24 @@ rahmaniani2020,train,rahmaniani2020,Stochastic / Robust / Bilevel Optimization,S
 rahmaniani2022,train,rahmaniani2022,Energy & Unit Commitment,MIP,Energy & Power Systems,planning,min,Q2,Q3
 reihaneh2019,train,reihaneh2019,Vehicle Routing & TSP,BIP,Transportation & Logistics,operational,min,Q3,Q2
 reinhardt2016,test,reinhardt2016,Vehicle Routing & TSP,BIP,Transportation & Logistics,operational,min,Q4,Q3
-ribeiro1994,train,ribeiro1994,Vehicle Scheduling,BIP,Public Transit & Mobility,strategic,min,Q1,Q3
-riley2025,train,riley2025,Stochastic / Robust / Bilevel Optimization,Stochastic/Robust/DRO,Supply Chain & Inventory,planning,min,Q2,Q4
+ribeiro1994,holdout,ribeiro1994,Vehicle Scheduling,BIP,Public Transit & Mobility,strategic,min,Q1,Q3
+riley2025,holdout,riley2025,Stochastic / Robust / Bilevel Optimization,Stochastic/Robust/DRO,Supply Chain & Inventory,planning,min,Q2,Q4
 roberti2015,train,roberti2015,Other (Transportation),MIP,Transportation & Logistics,planning,min,Q3,Q2
 roberti2018,train,roberti2018,Vehicle Routing & TSP,BIP,Transportation & Logistics,operational,min,Q3,Q2
 roberti2021,train,roberti2021,Vehicle Routing & TSP,MIP,Transportation & Logistics,operational,min,Q2,Q1
 ropke2009,train,ropke2009,Vehicle Routing & TSP,BIP,Transportation & Logistics,operational,min,Q4,Q4
 roshanaei2017,train,roshanaei2017,Scheduling (Machine / Crew / Workforce),MIP,Healthcare,strategic,min,Q4,Q4
-rostami2021,train,rostami2021,Facility Location,Stochastic/Robust/DRO,Transportation & Logistics,planning,min,Q2,Q4
+rostami2021,holdout,rostami2021,Facility Location,Stochastic/Robust/DRO,Transportation & Logistics,planning,min,Q2,Q4
 rothenbacher2018,train,rothenbacher2018,Vehicle Routing & TSP,BIP,Transportation & Logistics,operational,min,Q4,Q4
 rothenbacher2019,train,rothenbacher2019,Lot Sizing / Inventory,BIP,Supply Chain & Inventory,operational,min,Q2,Q1
 ruiz2007,train,ruiz2007,Scheduling (Machine / Crew / Workforce),CP,Manufacturing & Production,operational,min,Q2,Q2
-sadykov2013,train,sadykov2013,Packing / Cutting Stock,BIP,Foundational / Theoretical,planning,min,Q4,Q3
+sadykov2013,holdout,sadykov2013,Packing / Cutting Stock,BIP,Foundational / Theoretical,planning,min,Q4,Q3
 salemi2022,train,salemi2022,Energy & Unit Commitment,MIP,Energy & Power Systems,strategic,min,Q4,Q4
 samarghandi2017,train,samarghandi2017,Scheduling (Machine / Crew / Workforce),IP,Manufacturing & Production,operational,min,Q4,Q1
-sansegundo2016,train,sansegundo2016,Graph Optimization,BIP,Foundational / Theoretical,operational,max,Q1,Q4
+sansegundo2016,holdout,sansegundo2016,Graph Optimization,BIP,Foundational / Theoretical,operational,max,Q1,Q4
 sansegundo2023,train,sansegundo2023,Graph Optimization,BIP,Foundational / Theoretical,planning,max,Q3,Q2
 savelsbergh1997,train,savelsbergh1997,Other (Generalized Assignment),MIP,Foundational / Theoretical,strategic,max,Q1,Q1
-schwerdfeger2016,train,schwerdfeger2016,Scheduling (Machine / Crew / Workforce),IP,Manufacturing & Production,strategic,min,Q1,Q1
+schwerdfeger2016,holdout,schwerdfeger2016,Scheduling (Machine / Crew / Workforce),IP,Manufacturing & Production,strategic,min,Q1,Q1
 segundo2019,test,segundo2019,Graph Optimization,BIP,Foundational / Theoretical,planning,max,Q4,Q4
 segundo2019b,train,segundo2019b,Graph Optimization,BIP,Foundational / Theoretical,planning,max,Q4,Q3
 seker2021,train,seker2021,Graph Optimization,BIP,Foundational / Theoretical,planning,min,Q1,Q4
@@ -166,16 +166,16 @@ wangk2020,test,wangk2020,Vehicle Scheduling,Stochastic/Robust/DRO,Aerospace & Av
 wangy2020,train,wangy2020,Other (Quadratic Assignment),QP/MIQP,Foundational / Theoretical,planning,min,Q1,Q3
 watermeyer2020,train,watermeyer2020,Other (Project Scheduling),CP,Manufacturing & Production,operational,min,Q4,Q4
 watermeyer2022,train,watermeyer2022,Other (Project Scheduling),CP,Manufacturing & Production,operational,min,Q2,Q3
-watermeyer2023,train,watermeyer2023,Other (Project Scheduling),CP,Manufacturing & Production,operational,min,Q1,Q2
+watermeyer2023,holdout,watermeyer2023,Other (Project Scheduling),CP,Manufacturing & Production,operational,min,Q1,Q2
 wei2020,train,wei2020,Packing / Cutting Stock,BIP,Transportation & Logistics,planning,min,Q4,Q3
 wei2020b,train,wei2020b,Packing / Cutting Stock,BIP,Transportation & Logistics,planning,min,Q1,Q1
-wu2018,train,wu2018,Lot Sizing / Inventory,MIP,Manufacturing & Production,planning,min,Q3,Q1
+wu2018,holdout,wu2018,Lot Sizing / Inventory,MIP,Manufacturing & Production,planning,min,Q3,Q1
 wu2022,train,wu2022,Facility Location,MIP,Manufacturing & Production,planning,min,Q1,Q4
 wu2023,train,wu2023,Stochastic / Robust / Bilevel Optimization,Stochastic/Robust/DRO,Foundational / Theoretical,planning,max,Q2,Q1
 xie2019,train,xie2019,Other (Container Terminal),MIP,Transportation & Logistics,strategic,min,Q2,Q4
 xu2024,train,xu2024,Portfolio Optimization,QP/MIQP,Finance & Investment,strategic,min,Q3,Q1
 yang2013,train,yang2013,Other (Quadratic Knapsack),QP/MIQP,Foundational / Theoretical,planning,max,Q4,Q1
 zetina2019,train,zetina2019,Network Design & Flow,MIP,Telecommunications & Networking,planning,min,Q4,Q4
-zetina2020,train,zetina2020,Other (Quadratic Optimization),QP/MIQP,Foundational / Theoretical,planning,min,Q4,Q1
+zetina2020,holdout,zetina2020,Other (Quadratic Optimization),QP/MIQP,Foundational / Theoretical,planning,min,Q4,Q1
 zhang2025,train,zhang2025,Other (Set Covering / Partitioning),IP,Foundational / Theoretical,planning,min,Q3,Q2
 zohali2022,test,zohali2022,Other (Assembly Line Balancing),MIP,Manufacturing & Production,planning,min,Q1,Q3

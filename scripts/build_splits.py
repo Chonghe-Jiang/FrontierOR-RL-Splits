@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build four reproducible FrontierOR RL train/test split manifests."""
+"""Build four reproducible FrontierOR RL train/holdout/test manifests."""
 
 from __future__ import annotations
 
@@ -21,6 +21,8 @@ SOURCE_REVISION = "a6fe77d0c79184bbea1e8f72ca6efd1a75eec1cf"
 SOURCE_REPO = "LeoJiangOR/FrontierOR-Audited-180"
 SEED = 20260831
 TEST_TASK_COUNT = 30
+HOLDOUT_TASK_COUNT = 20
+UNIFIED_EVAL_LIMIT_SECONDS = 900
 TIME_LIMIT_TIERS = (
     (5.0, 60),
     (30.0, 120),
@@ -354,6 +356,124 @@ def choose_task_partition(tasks: list[dict]) -> tuple[set[str], set[str], dict]:
     return train_ids, test_ids, rationale
 
 
+def choose_holdout_partition(
+    tasks: list[dict], train_pool: set[str], test_ids: set[str]
+) -> tuple[set[str], set[str], dict]:
+    """Split the original 150-task train pool into 130 train and 20 holdout tasks."""
+    task_by_id = {row["paper_id"]: row for row in tasks}
+    features, prefix_weights = feature_map(tasks)
+    pool_totals = Counter(token for case_id in train_pool for token in features[case_id])
+    ratio = HOLDOUT_TASK_COUNT / len(train_pool)
+
+    # A type that has only one representative in the 150-task pool must remain in
+    # train, even when other representatives of that type occur in final test.
+    coverage_fields = ("problem_class", "formulation_type", "application_field")
+    protected_groups = {
+        (field, value): {
+            case_id for case_id in train_pool if task_by_id[case_id][field] == value
+        }
+        for field in coverage_fields
+        for value in {task_by_id[case_id][field] for case_id in train_pool}
+    }
+    forced_train = {"earl2005", "ostrowski2012"} | {
+        next(iter(group)) for group in protected_groups.values() if len(group) == 1
+    }
+    candidates = sorted(train_pool - forced_train)
+
+    def score(selection: set[str]) -> float:
+        if any(group <= selection for group in protected_groups.values()):
+            return math.inf
+        counts = Counter(token for case_id in selection for token in features[case_id])
+        total_score = 0.0
+        for token, total in pool_totals.items():
+            prefix = token.split("=", 1)[0]
+            target = total * ratio
+            error = counts[token] - target
+            total_score += prefix_weights[prefix] * error * error / max(1.0, target)
+            if total >= 6 and target >= 1 and counts[token] == 0:
+                total_score += 4.0 * prefix_weights[prefix]
+        return total_score
+
+    rng = random.Random(SEED + 1)
+    best_selection = None
+    best_score = math.inf
+    for _ in range(24):
+        selected = set(rng.sample(candidates, HOLDOUT_TASK_COUNT))
+        current = score(selected)
+        for _round in range(100):
+            best_swap = None
+            best_swap_score = current
+            outside = [case_id for case_id in candidates if case_id not in selected]
+            for outgoing in sorted(selected):
+                reduced = selected - {outgoing}
+                for incoming in outside:
+                    proposed = reduced | {incoming}
+                    candidate_score = score(proposed)
+                    if candidate_score < best_swap_score - 1e-12:
+                        best_swap_score = candidate_score
+                        best_swap = (outgoing, incoming)
+            if best_swap is None:
+                break
+            selected.remove(best_swap[0])
+            selected.add(best_swap[1])
+            current = best_swap_score
+        if current < best_score:
+            best_score = current
+            best_selection = set(selected)
+
+    assert best_selection is not None
+    holdout_ids = best_selection
+    train_ids = train_pool - holdout_ids
+    if (
+        len(train_ids) != 130
+        or len(holdout_ids) != 20
+        or len(test_ids) != 30
+        or train_ids & holdout_ids
+        or train_ids & test_ids
+        or holdout_ids & test_ids
+        or not forced_train <= train_ids
+    ):
+        raise ValueError("Train/holdout/test task partition is invalid")
+
+    holdout_counts = Counter(
+        token for case_id in holdout_ids for token in features[case_id]
+    )
+    balance = []
+    for token, pool_total in sorted(pool_totals.items()):
+        prefix, value = token.split("=", 1)
+        all_total = sum(token in features[case_id] for case_id in task_by_id)
+        test_total = sum(token in features[case_id] for case_id in test_ids)
+        balance.append(
+            {
+                "dimension": prefix,
+                "value": value,
+                "all_tasks": all_total,
+                "train_tasks": pool_total - holdout_counts[token],
+                "holdout_tasks": holdout_counts[token],
+                "test_tasks": test_total,
+                "target_holdout_tasks": round(pool_total * ratio, 3),
+            }
+        )
+    return train_ids, holdout_ids, {
+        "algorithm": "deterministic multi-start local search over stratification error",
+        "seed": SEED + 1,
+        "objective_score": round(best_score, 12),
+        "train_task_count": len(train_ids),
+        "holdout_task_count": len(holdout_ids),
+        "test_task_count": len(test_ids),
+        "holdout_source": "selected only from the frozen 150-task training pool",
+        "role": (
+            "holdout is for model selection and tuning; final test remains untouched"
+        ),
+        "coverage_constraint": (
+            "every problem class, formulation type, and application field appearing "
+            "in holdout or test retains at least one train exemplar; the alias pair stays in train"
+        ),
+        "forced_train_tasks": sorted(forced_train),
+        "balance": balance,
+    }
+
+
 def prepare_instances(runtime_records: list[dict]) -> list[dict]:
     prepared = []
     for source in runtime_records:
@@ -392,15 +512,39 @@ def representative_pair(rows: list[dict]) -> list[dict]:
     return [next((row for row in small if row["instance"] == "tiny_instance.json"), small[0]), large[len(large) // 2]]
 
 
+def representative_large(rows: list[dict]) -> dict:
+    large = sorted(
+        (row for row in rows if row["scale"] == "large"),
+        key=lambda row: (
+            row["gurobi_runtime_seconds"] is None,
+            row["gurobi_runtime_seconds"]
+            if row["gurobi_runtime_seconds"] is not None
+            else UNIFIED_EVAL_LIMIT_SECONDS,
+            row["instance"],
+        ),
+    )
+    if not large:
+        raise ValueError(f"No large instance for {rows[0]['case_id']}")
+    return large[len(large) // 2]
+
+
+def percentile(values: list[float], probability: float) -> float:
+    ordered = sorted(values)
+    return ordered[math.ceil(len(ordered) * probability) - 1]
+
+
 def summarize_records(records: list[dict]) -> dict:
     result = {}
-    for phase in ("train", "test"):
+    for phase in ("train", "holdout", "test"):
         selected = [row for row in records if row["phase"] == phase]
+        if not selected:
+            continue
         limits = [row["time_limit_seconds"] for row in selected]
-        observed = [
-            row["gurobi_runtime_seconds"]
-            for row in selected
+        runtimes = [
+            float(row["gurobi_runtime_seconds"])
             if row["gurobi_runtime_seconds"] is not None
+            else float(UNIFIED_EVAL_LIMIT_SECONDS)
+            for row in selected
         ]
         result[phase] = {
             "task_count": len({row["case_id"] for row in selected}),
@@ -413,28 +557,81 @@ def summarize_records(records: list[dict]) -> dict:
                 math.ceil(0.9 * len(limits)) - 1
             ],
             "serial_upper_bound_hours": round(sum(limits) / 3600, 3),
-            "median_gurobi_runtime_seconds": round(statistics.median(observed), 6),
+            "uniform_eval_serial_upper_bound_hours": round(
+                len(selected) * UNIFIED_EVAL_LIMIT_SECONDS / 3600, 3
+            ),
+            "median_gurobi_runtime_seconds": round(statistics.median(runtimes), 6),
+            "p90_gurobi_runtime_seconds": round(percentile(runtimes, 0.90), 6),
+            "p95_gurobi_runtime_seconds": round(percentile(runtimes, 0.95), 6),
+            "runtime_over_300_seconds_count": sum(value > 300 for value in runtimes),
             "time_limit_tier_counts": dict(sorted(Counter(limits).items())),
         }
     return result
 
 
+def evaluation_analysis(records: list[dict]) -> dict:
+    evaluated = [row for row in records if row["phase"] in {"holdout", "test"}]
+    runtimes = [
+        float(row["gurobi_runtime_seconds"])
+        if row["gurobi_runtime_seconds"] is not None
+        else float(UNIFIED_EVAL_LIMIT_SECONDS)
+        for row in evaluated
+    ]
+    p90 = percentile(runtimes, 0.90)
+    split_cap, _ = time_limit(p90, "observed")
+    return {
+        "evaluated_instance_count": len(evaluated),
+        "median_gurobi_runtime_seconds": round(statistics.median(runtimes), 6),
+        "p90_gurobi_runtime_seconds": round(p90, 6),
+        "p95_gurobi_runtime_seconds": round(percentile(runtimes, 0.95), 6),
+        "runtime_over_300_seconds_count": sum(value > 300 for value in runtimes),
+        "runtime_over_300_seconds_fraction": round(
+            sum(value > 300 for value in runtimes) / len(runtimes), 6
+        ),
+        "timeout_censored_count": sum(
+            row["gurobi_runtime_status"] == "timeout_censored" for row in evaluated
+        ),
+        "split_specific_p90_cap_seconds": split_cap,
+        "official_uniform_eval_cap_seconds": UNIFIED_EVAL_LIMIT_SECONDS,
+        "uniform_serial_upper_bound_hours": round(
+            len(evaluated) * UNIFIED_EVAL_LIMIT_SECONDS / 3600, 3
+        ),
+        "rationale": (
+            "The p90 falls in the hardest runtime tier. A single 900-second per-instance "
+            "cap is therefore used for comparable evaluation across all protocols."
+        ),
+    }
+
+
 def build_splits(
-    instances: list[dict], train_tasks: set[str], test_tasks: set[str]
+    instances: list[dict], train_tasks: set[str], holdout_tasks: set[str], test_tasks: set[str]
 ) -> list[dict]:
     by_task: dict[str, list[dict]] = defaultdict(list)
     for row in instances:
         by_task[row["case_id"]].append(row)
 
+    scale_holdout_keys = {
+        (row["case_id"], row["instance"])
+        for case_id in sorted(by_task)
+        for row in [representative_large(by_task[case_id])]
+    }
     definitions = [
         {
             "id": "scale_ood",
             "title": "Scale-OOD",
             "question": "Tests whether a policy trained on small instances can solve larger instances of the same tasks.",
             "train_rule": "All small instances from all 180 tasks",
-            "test_rule": "All large instances from the same 180 tasks",
+            "holdout_rule": "One median-runtime large replica from each task",
+            "test_rule": "All remaining large replicas from the same 180 tasks",
             "records": [
-                {**row, "phase": "train" if row["scale"] == "small" else "test"}
+                {
+                    **row,
+                    "phase": "train"
+                    if row["scale"] == "small"
+                    else "holdout"
+                    if (row["case_id"], row["instance"]) in scale_holdout_keys
+                    else "test",
+                }
                 for row in instances
             ],
         },
@@ -442,10 +639,18 @@ def build_splits(
             "id": "task_ood_full",
             "title": "Task-OOD Full",
             "question": "Tests transfer to unseen tasks after training on every available instance in the training partition.",
-            "train_rule": "All available instances from the 150 train tasks",
+            "train_rule": "All available instances from the 130 train tasks",
+            "holdout_rule": "All available instances from 20 validation tasks",
             "test_rule": "All available instances from the 30 held-out tasks",
             "records": [
-                {**row, "phase": "train" if row["case_id"] in train_tasks else "test"}
+                {
+                    **row,
+                    "phase": "train"
+                    if row["case_id"] in train_tasks
+                    else "holdout"
+                    if row["case_id"] in holdout_tasks
+                    else "test",
+                }
                 for row in instances
             ],
         },
@@ -454,9 +659,17 @@ def build_splits(
             "title": "Task-OOD Low-Resource",
             "question": "Uses two instances per task to test transfer when training data is limited.",
             "train_rule": "Exactly one canonical small and one median-runtime large instance per train task",
+            "holdout_rule": "The same two-instance rule on each validation task",
             "test_rule": "The same two-instance selection rule on each held-out task",
             "records": [
-                {**row, "phase": "train" if case_id in train_tasks else "test"}
+                {
+                    **row,
+                    "phase": "train"
+                    if case_id in train_tasks
+                    else "holdout"
+                    if case_id in holdout_tasks
+                    else "test",
+                }
                 for case_id in sorted(by_task)
                 for row in representative_pair(by_task[case_id])
             ],
@@ -465,12 +678,18 @@ def build_splits(
             "id": "joint_ood",
             "title": "Joint-OOD",
             "question": "Combines both shifts: the test tasks are unseen, and their test instances are large.",
-            "train_rule": "All small instances from the 150 train tasks",
+            "train_rule": "All small instances from the 130 train tasks",
+            "holdout_rule": "All large instances from the 20 validation tasks",
             "test_rule": "All large instances from the 30 held-out tasks",
             "records": [
                 {**row, "phase": "train"}
                 for row in instances
                 if row["case_id"] in train_tasks and row["scale"] == "small"
+            ]
+            + [
+                {**row, "phase": "holdout"}
+                for row in instances
+                if row["case_id"] in holdout_tasks and row["scale"] == "large"
             ]
             + [
                 {**row, "phase": "test"}
@@ -484,9 +703,22 @@ def build_splits(
             definition["records"], key=lambda row: (row["phase"], row["case_id"], row["instance"])
         )
         definition["summary"] = summarize_records(definition["records"])
+        definition["evaluation_analysis"] = evaluation_analysis(definition["records"])
+        for row in definition["records"]:
+            row["eval_time_limit_seconds"] = (
+                UNIFIED_EVAL_LIMIT_SECONDS
+                if row["phase"] in {"holdout", "test"}
+                else None
+            )
         definition["timeout_policy"] = {
-            "scope": "per instance, identical in train and test",
-            "maximum_seconds": 900,
+            "scope": "per evaluated instance, identical in holdout and final test",
+            "official_eval_limit_seconds": UNIFIED_EVAL_LIMIT_SECONDS,
+            "official_eval_rule": (
+                "one agent attempt per instance; terminate at 900 wall-clock seconds"
+            ),
+            "runtime_tiers_role": (
+                "optional rollout scheduling and compute planning, not the official eval cap"
+            ),
             "tiers": [
                 {"gurobi_runtime_range": "[0, 5] seconds", "time_limit_seconds": 60},
                 {"gurobi_runtime_range": "(5, 30] seconds", "time_limit_seconds": 120},
@@ -495,14 +727,16 @@ def build_splits(
                 {"gurobi_runtime_range": "> 300 seconds or timeout-censored", "time_limit_seconds": 900},
             ],
             "reason": (
-                "Broad tiers account for runtimes measured in different environments and give "
-                "slower Gurobi instances more wall-clock time."
+                "Every split has a Gurobi-runtime p90 above 300 seconds. The common maximum "
+                "avoids giving different methods or protocols different per-instance budgets."
             ),
         }
     return definitions
 
 
-def task_catalog(tasks: list[dict], train_tasks: set[str]) -> list[dict]:
+def task_catalog(
+    tasks: list[dict], train_tasks: set[str], holdout_tasks: set[str]
+) -> list[dict]:
     fields = [
         "case_id",
         "partition",
@@ -525,7 +759,14 @@ def task_catalog(tasks: list[dict], train_tasks: set[str]) -> list[dict]:
     ]
     rows = []
     for task in sorted(tasks, key=lambda row: row["paper_id"]):
-        row = {"case_id": task["paper_id"], "partition": "train" if task["paper_id"] in train_tasks else "test"}
+        row = {
+            "case_id": task["paper_id"],
+            "partition": "train"
+            if task["paper_id"] in train_tasks
+            else "holdout"
+            if task["paper_id"] in holdout_tasks
+            else "test",
+        }
         row.update({field: task.get(field) for field in fields if field not in row})
         rows.append(row)
     return rows
@@ -537,6 +778,7 @@ def make_index(
     cards = []
     for split in split_defs:
         train = split["summary"]["train"]
+        holdout = split["summary"]["holdout"]
         test = split["summary"]["test"]
         cards.append(
             f"""
@@ -544,8 +786,9 @@ def make_index(
               <div class="eyebrow">{html.escape(split['id'])}</div>
               <h3>{html.escape(split['title'])}</h3>
               <p>{html.escape(split['question'])}</p>
-              <div class="metrics"><span><b>{train['instance_count']}</b> train</span><span><b>{test['instance_count']}</b> test</span></div>
+              <div class="metrics"><span><b>{train['instance_count']}</b> train</span><span class="holdout-metric"><b>{holdout['instance_count']}</b> holdout</span><span><b>{test['instance_count']}</b> test</span></div>
               <p class="rule"><strong>Train:</strong> {html.escape(split['train_rule'])}</p>
+              <p class="rule"><strong>Holdout:</strong> {html.escape(split['holdout_rule'])}</p>
               <p class="rule"><strong>Test:</strong> {html.escape(split['test_rule'])}</p>
               <a href="splits/{split['id']}.json">JSON</a> · <a href="splits/{split['id']}.csv">CSV</a>
             </article>"""
@@ -554,11 +797,12 @@ def make_index(
     split_json = json.dumps(
         [{"id": s["id"], "title": s["title"], "summary": s["summary"]} for s in split_defs]
     )
+    holdout_preview = [row for row in catalog if row["partition"] == "holdout"]
     test_preview = [row for row in catalog if row["partition"] == "test"]
     monotone_percent = 100 * replica_audit["byte_size_monotone_fraction"]
     balance_rows = "".join(
         f"<tr><td>{html.escape(row['dimension'])}</td><td>{html.escape(row['value'])}</td>"
-        f"<td>{row['all_tasks']}</td><td>{row['train_tasks']}</td><td>{row['test_tasks']}</td></tr>"
+        f"<td>{row['all_tasks']}</td><td>{row['train_tasks']}</td><td>{row['holdout_tasks']}</td><td>{row['test_tasks']}</td></tr>"
         for row in rationale["balance"]
         if row["dimension"] in {"category", "formulation", "runtime", "direction"}
     )
@@ -567,7 +811,7 @@ def make_index(
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Four reproducible RL train/test splits for FrontierOR.">
+  <meta name="description" content="Four reproducible RL train/holdout/test protocols for FrontierOR.">
   <title>FrontierOR RL Splits</title>
   <style>
     :root {{ --ink:#17212b; --muted:#5e6b78; --paper:#f6f3ec; --panel:#fffdf8; --line:#d8d1c4; --blue:#205b73; --orange:#d46b3c; --green:#3e765b; }}
@@ -582,7 +826,7 @@ def make_index(
     .stamp {{ display:inline-flex; gap:10px; flex-wrap:wrap; margin-top:18px; }} .stamp span {{ border:1px solid var(--line); border-radius:99px; padding:6px 12px; background:var(--panel); }}
     section {{ padding:52px 0 12px; }} .grid {{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }}
     .card {{ background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:22px; box-shadow:0 8px 26px #473c2c0b; }}
-    .metrics {{ display:flex; gap:8px; margin:18px 0; }} .metrics span {{ background:#e7eef0; color:var(--blue); border-radius:8px; padding:8px 12px; }}
+    .metrics {{ display:flex; gap:8px; margin:18px 0; flex-wrap:wrap; }} .metrics span {{ background:#e7eef0; color:var(--blue); border-radius:8px; padding:8px 12px; }} .metrics .holdout-metric {{ background:#eee8f7; color:#604682; }}
     .rule {{ margin:.45rem 0; color:var(--muted); }} a {{ color:var(--blue); }}
     .matrix {{ display:grid; grid-template-columns:160px repeat(2,1fr); border:1px solid var(--line); border-radius:14px; overflow:hidden; background:var(--panel); }}
     .matrix > div {{ padding:16px; border-right:1px solid var(--line); border-bottom:1px solid var(--line); }} .matrix .head {{ font-weight:800; background:#e8e2d8; }}
@@ -592,7 +836,7 @@ def make_index(
     .tiers {{ display:grid; grid-template-columns:repeat(5,1fr); gap:10px; }} .tier {{ padding:15px; border-radius:12px; background:var(--panel); border:1px solid var(--line); }} .tier b {{ display:block; font-size:1.55rem; color:var(--green); }}
     .controls {{ display:flex; gap:10px; flex-wrap:wrap; margin-bottom:14px; }} input,select {{ padding:10px 12px; border:1px solid var(--line); border-radius:8px; background:white; font:inherit; }} input {{ min-width:280px; }}
     .table-wrap {{ overflow:auto; border:1px solid var(--line); border-radius:12px; background:white; max-height:560px; }} table {{ border-collapse:collapse; width:100%; font-size:.88rem; }} th,td {{ padding:9px 11px; border-bottom:1px solid #eee8dd; text-align:left; white-space:nowrap; }} th {{ position:sticky; top:0; background:#ece7dd; z-index:1; }}
-    .pill {{ padding:3px 8px; border-radius:99px; font-weight:700; }} .train {{ background:#e3f0e8; color:#245a3f; }} .test {{ background:#fde6db; color:#8b3f20; }}
+    .pill {{ padding:3px 8px; border-radius:99px; font-weight:700; }} .train {{ background:#e3f0e8; color:#245a3f; }} .holdout {{ background:#eee8f7; color:#604682; }} .test {{ background:#fde6db; color:#8b3f20; }}
     footer {{ color:var(--muted); padding-top:48px; }}
     @media(max-width:760px) {{ .grid,.compare {{ grid-template-columns:1fr; }} .tiers {{ grid-template-columns:repeat(2,1fr); }} .matrix {{ grid-template-columns:110px repeat(2,1fr); font-size:.86rem; }} }}
   </style>
@@ -600,9 +844,9 @@ def make_index(
 <body><main>
   <header>
     <div class="kicker">FrontierOR · RL evaluation</div>
-    <h1>Train/test splits<br>for FrontierOR RL</h1>
-    <p class="lede">These four splits test whether an optimization agent transfers to larger instances, unseen tasks, or both.</p>
-    <div class="stamp"><span>180 task directories</span><span>1,095 verified instances</span><span>150 / 30 task partition</span><span>≤ 15 min per run</span></div>
+    <h1>Train, holdout, and test<br>for FrontierOR RL</h1>
+    <p class="lede">Four protocols separate model selection from final evaluation while testing transfer to larger instances, unseen tasks, or both.</p>
+    <div class="stamp"><span>180 task directories</span><span>1,095 verified instances</span><span>130 / 20 / 30 task partition</span><span>15 min uniform eval cap</span></div>
     <div class="actions"><a class="button" href="https://huggingface.co/datasets/{SOURCE_REPO}">View the data on Hugging Face</a><a class="button secondary" href="https://github.com/Chonghe-Jiang/FrontierOR-RL-Splits">View the split files on GitHub</a></div>
   </header>
 
@@ -625,27 +869,40 @@ def make_index(
     <p class="callout"><strong>One exception:</strong> <code>segundo2019</code> has only <code>large_1</code>, <code>large_2</code>, and <code>large_5</code>. An exact 3/2 large-only split therefore covers 179 tasks. To retain all 180, use a documented 2/1 split for this task.</p>
   </section>
 
-  <section><h2>Four ready-to-use splits</h2><div class="grid">{''.join(cards)}</div></section>
+  <section>
+    <h2>Why there is now a holdout set</h2>
+    <p>The holdout partition is the only data used for model selection, prompt revision, reward tuning, and checkpoint choice. Final-test results are consulted only after those choices are frozen. For task-based protocols, 20 tasks are drawn only from the former 150-task training pool, leaving 130 train, 20 holdout, and the original 30 final-test tasks. For Scale-OOD, each task contributes one median-runtime large replica to holdout; the other large replicas remain in final test.</p>
+    <p class="callout"><strong>Stable task test:</strong> Task-OOD and Joint-OOD keep the original 30 final-test task IDs unchanged. Scale-OOD uses an instance boundary, so 180 large replicas that previously belonged to test now serve as validation holdout.</p>
+  </section>
+
+  <section><h2>Four ready-to-use protocols</h2><div class="grid">{''.join(cards)}</div></section>
 
   <section>
-    <h2>How we chose the 30 test tasks</h2>
-    <p>We used a deterministic search instead of drawing 30 tasks at random. The search balances category, formulation, application field, optimization direction, runtime quartile, model-size quartile, publication era, and problem classes with enough examples to split.</p>
+    <h2>How we chose the task partitions</h2>
+    <p>The 30 final-test tasks remain fixed. A second deterministic, stratified search selects 20 holdout tasks from the old 150-task training pool. It balances category, formulation, application field, optimization direction, runtime quartile, model-size quartile, publication era, and sufficiently represented problem classes.</p>
     <div class="callout"><strong>Leakage control:</strong> <code>earl2005</code> and its legacy alias <code>ostrowski2012</code> stay together in train. The release has 180 directories and 179 independent benchmark identities.</div>
-    <p><a href="splits/task_partition.json">Full partition rationale and balance table</a> · Test preview: {', '.join(html.escape(row['case_id']) for row in test_preview[:8])}…</p>
-    <details><summary>Selected balance table</summary><div class="table-wrap"><table><thead><tr><th>Dimension</th><th>Value</th><th>All</th><th>Train</th><th>Test</th></tr></thead><tbody>{balance_rows}</tbody></table></div></details>
+    <p><a href="splits/task_partition.json">Full partition rationale and balance table</a><br>Holdout preview: {', '.join(html.escape(row['case_id']) for row in holdout_preview[:8])}…<br>Test preview: {', '.join(html.escape(row['case_id']) for row in test_preview[:8])}…</p>
+    <details><summary>Selected balance table</summary><div class="table-wrap"><table><thead><tr><th>Dimension</th><th>Value</th><th>All</th><th>Train</th><th>Holdout</th><th>Test</th></tr></thead><tbody>{balance_rows}</tbody></table></div></details>
   </section>
 
   <section>
-    <h2>Runtime-based limits</h2>
-    <p>Each instance keeps the same limit in every split. We use broad brackets because the timing data includes current reruns and historical runs from different systems. Treating those measurements as one precise speed benchmark would be misleading.</p>
-    <div class="tiers"><div class="tier"><b>60s</b>Gurobi ≤ 5s</div><div class="tier"><b>120s</b>5 to 30s</div><div class="tier"><b>300s</b>30 to 120s</div><div class="tier"><b>600s</b>120 to 300s</div><div class="tier"><b>900s</b>&gt;300s or censored</div></div>
-    <p class="callout"><strong>Maximum:</strong> one training rollout or evaluation attempt may run for at most 900 seconds (15 minutes). The manifests also report serial upper bounds for compute planning.</p>
-    <p><a href="splits/time_limits.csv">Download all 1,095 instance limits</a></p>
+    <h2>One evaluation limit</h2>
+    <p>All four protocols use the same wall-clock limit: <strong>900 seconds per holdout or test instance</strong>. We compared the Gurobi runtime distribution in each evaluation set; every protocol has a 90th percentile above 300 seconds and therefore reaches the hardest runtime tier. A common cap makes scores comparable and avoids granting easier-looking splits a smaller budget.</p>
+    <div class="table-wrap"><table><thead><tr><th>Protocol</th><th>Holdout</th><th>Final test</th><th>Gurobi p90</th><th>&gt;300s</th><th>Uniform cap</th><th>Serial maximum</th></tr></thead><tbody>{''.join(f"<tr><td>{html.escape(split['title'])}</td><td>{split['summary']['holdout']['instance_count']}</td><td>{split['summary']['test']['instance_count']}</td><td>{split['evaluation_analysis']['p90_gurobi_runtime_seconds']:.1f}s</td><td>{100 * split['evaluation_analysis']['runtime_over_300_seconds_fraction']:.1f}%</td><td>900s / instance</td><td>{split['evaluation_analysis']['uniform_serial_upper_bound_hours']:.1f}h</td></tr>" for split in split_defs)}</tbody></table></div>
+    <p class="callout"><strong>Interpretation:</strong> 15 minutes is a per-instance limit, not a promise that a complete evaluation consumes only 15 minutes of compute. The serial maximum is instance count × 15 minutes; parallel workers reduce wall time but not total compute.</p>
+    <p>The older 60/120/300/600/900-second tiers remain in <a href="splits/time_limits.csv">the runtime table</a> for optional training-rollout scheduling and capacity planning. They are not the official evaluation limit.</p>
+  </section>
+
+  <section>
+    <h2>Run evaluation consistently</h2>
+    <ol><li>Tune and select checkpoints only on rows marked <code>holdout</code>.</li><li>Freeze the agent, prompt, checker-visibility policy, and decoding settings before using <code>test</code> results.</li><li>Give each evaluated instance one primary attempt and stop it after 900 wall-clock seconds. Any repeated-seed evaluation must use the same repeat count for every compared method.</li><li>Run the task's schema and checker on the submitted solution; retain malformed output, checker failure, and timeout as explicit failures.</li><li>Report feasibility, objective quality, timeout rate, checker-failure rate, and wall-clock compute. Aggregate within each task first, then average across tasks.</li></ol>
+    <p>The manifests are public, so this separation is procedural rather than cryptographic. A competition can apply the same IDs to a private copy of the instances or reference solutions for a genuinely hidden final test.</p>
+    <p><a href="splits/evaluation_protocol.json">Machine-readable evaluation protocol and budget analysis</a></p>
   </section>
 
   <section>
     <h2>Inspect the task partition</h2>
-    <div class="controls"><input id="search" placeholder="Search task, class, application…"><select id="phase"><option value="">All partitions</option><option>train</option><option>test</option></select><select id="klass"><option value="">All problem classes</option></select></div>
+    <div class="controls"><input id="search" placeholder="Search task, class, application…"><select id="phase"><option value="">All partitions</option><option>train</option><option>holdout</option><option>test</option></select><select id="klass"><option value="">All problem classes</option></select></div>
     <div class="table-wrap"><table><thead><tr><th>Task</th><th>Split</th><th>Problem class</th><th>Formulation</th><th>Application</th><th>Runtime</th></tr></thead><tbody id="taskRows"></tbody></table></div>
     <p id="count"></p>
   </section>
@@ -684,10 +941,19 @@ def main() -> None:
     root = args.output_root.resolve()
     tasks_raw, runtime_records, runtime_payload = load_source(args.dataset_root.resolve())
     tasks = enrich_tasks(tasks_raw, runtime_records)
-    train_tasks, test_tasks, rationale = choose_task_partition(tasks)
+    train_pool, test_tasks, test_rationale = choose_task_partition(tasks)
+    train_tasks, holdout_tasks, holdout_rationale = choose_holdout_partition(
+        tasks, train_pool, test_tasks
+    )
+    rationale = {
+        "partition": "130 train / 20 holdout / 30 final test",
+        "test_selection": test_rationale,
+        "holdout_selection": holdout_rationale,
+        "balance": holdout_rationale["balance"],
+    }
     instances = prepare_instances(runtime_records)
-    splits = build_splits(instances, train_tasks, test_tasks)
-    catalog = task_catalog(tasks, train_tasks)
+    splits = build_splits(instances, train_tasks, holdout_tasks, test_tasks)
+    catalog = task_catalog(tasks, train_tasks, holdout_tasks)
     replica_audit = large_replica_audit(args.dataset_root.resolve())
 
     provenance = {
@@ -707,9 +973,10 @@ def main() -> None:
     write_json(
         root / "splits/task_partition.json",
         {
-            "format": "frontieror-task-partition-v1",
+            "format": "frontieror-task-partition-v2",
             "source_revision": SOURCE_REVISION,
             "train_tasks": sorted(train_tasks),
+            "holdout_tasks": sorted(holdout_tasks),
             "test_tasks": sorted(test_tasks),
             "rationale": rationale,
         },
@@ -742,6 +1009,7 @@ def main() -> None:
         "gurobi_runtime_source",
         "time_limit_seconds",
         "time_limit_rule",
+        "eval_time_limit_seconds",
         "checker_accepted",
     ]
     for split in splits:
@@ -756,7 +1024,53 @@ def main() -> None:
         write_json(root / f"splits/{split['id']}.json", payload)
         write_csv(root / f"splits/{split['id']}.csv", split["records"], instance_fields)
 
-    time_fields = [field for field in instance_fields if field != "phase"]
+    evaluation_rows = [
+        {
+            "split_id": split["id"],
+            "title": split["title"],
+            "holdout_instance_count": split["summary"]["holdout"]["instance_count"],
+            "test_instance_count": split["summary"]["test"]["instance_count"],
+            **split["evaluation_analysis"],
+        }
+        for split in splits
+    ]
+    write_json(
+        root / "splits/evaluation_protocol.json",
+        {
+            "format": "frontieror-evaluation-protocol-v1",
+            "source_revision": SOURCE_REVISION,
+            "holdout_role": (
+                "model selection, prompt/reward tuning, and checkpoint selection only"
+            ),
+            "final_test_rule": "use final-test results only after the evaluation configuration is frozen",
+            "visibility_note": (
+                "the published manifests are procedurally held out, not cryptographically hidden"
+            ),
+            "uniform_eval_limit_seconds_per_instance": UNIFIED_EVAL_LIMIT_SECONDS,
+            "primary_attempts_per_instance": 1,
+            "repeat_rule": (
+                "optional repeated-seed evaluation must use the same repeat count for every method"
+            ),
+            "timeout_result": "retain and report as an explicit failure",
+            "aggregation": (
+                "aggregate instance metrics within task, then macro-average across tasks"
+            ),
+            "required_metrics": [
+                "checker-accepted feasibility rate",
+                "objective quality",
+                "timeout rate",
+                "checker-failure rate",
+                "wall-clock compute",
+            ],
+            "split_analysis": evaluation_rows,
+        },
+    )
+
+    time_fields = [
+        field
+        for field in instance_fields
+        if field not in {"phase", "eval_time_limit_seconds"}
+    ]
     write_csv(root / "splits/time_limits.csv", instances, time_fields)
     write_text(root / "index.html", make_index(splits, catalog, rationale, replica_audit))
 
@@ -769,7 +1083,15 @@ def main() -> None:
     manifest_lines = [f"{sha256(path)}  {path.relative_to(root).as_posix()}" for path in generated]
     write_text(root / "MANIFEST.sha256", "\n".join(manifest_lines) + "\n")
 
-    print("Task partition:", len(train_tasks), "train /", len(test_tasks), "test")
+    print(
+        "Task partition:",
+        len(train_tasks),
+        "train /",
+        len(holdout_tasks),
+        "holdout /",
+        len(test_tasks),
+        "test",
+    )
     for split in splits:
         print(split["id"], json.dumps(split["summary"], sort_keys=True))
 

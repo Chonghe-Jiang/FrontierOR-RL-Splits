@@ -1,5 +1,5 @@
 {
-  "format": "frontieror-task-partition-v1",
+  "format": "frontieror-task-partition-v2",
   "source_revision": "a6fe77d0c79184bbea1e8f72ca6efd1a75eec1cf",
   "train_tasks": [
     "adulyasak2015",
@@ -21,7 +21,6 @@
     "bodur2017",
     "bollapragada2001",
     "borndorfer2007",
-    "bragin2022",
     "brandao2016",
     "bront2009",
     "byeon2022",
@@ -34,27 +33,21 @@
     "cherkesly2015",
     "contreras2011",
     "cordeau2006",
-    "cordeau2014",
     "cordeau2019",
     "cote2018",
     "cote2019",
     "cunha2021",
-    "damcikurt2016",
-    "dayarian2019",
     "degraeve2007",
-    "delorme2020",
     "desaulniers2010",
     "desaulniers2014",
     "desaulniers2016",
     "dienstknecht2024",
     "earl2005",
-    "eiselt2009",
     "elci2022",
     "fischetti1998",
     "fischetti2017",
     "fleszar2022b",
     "forrest2006",
-    "fragkos2016",
     "fragkos2021",
     "freeman2018",
     "freling2003",
@@ -72,10 +65,8 @@
     "hassannayebi2016",
     "hewitt2024",
     "hoffman1993",
-    "hosseinian2020",
     "huisman2005",
     "juvin2023",
-    "kang2021",
     "knueven2020",
     "kobayashi2021",
     "kobeaga2024",
@@ -83,9 +74,7 @@
     "kress2019",
     "kreter2018",
     "lai2021",
-    "laporte2003",
     "lee1996",
-    "legrain2024",
     "letelier2022",
     "levin2017",
     "li2020",
@@ -109,24 +98,18 @@
     "rahmaniani2020",
     "rahmaniani2022",
     "reihaneh2019",
-    "ribeiro1994",
-    "riley2025",
     "roberti2015",
     "roberti2018",
     "roberti2021",
     "ropke2009",
     "roshanaei2017",
-    "rostami2021",
     "rothenbacher2018",
     "rothenbacher2019",
     "ruiz2007",
-    "sadykov2013",
     "salemi2022",
     "samarghandi2017",
-    "sansegundo2016",
     "sansegundo2023",
     "savelsbergh1997",
-    "schwerdfeger2016",
     "segundo2019b",
     "seker2021",
     "song2021",
@@ -140,18 +123,37 @@
     "wangy2020",
     "watermeyer2020",
     "watermeyer2022",
-    "watermeyer2023",
     "wei2020",
     "wei2020b",
-    "wu2018",
     "wu2022",
     "wu2023",
     "xie2019",
     "xu2024",
     "yang2013",
     "zetina2019",
-    "zetina2020",
     "zhang2025"
+  ],
+  "holdout_tasks": [
+    "bragin2022",
+    "cordeau2014",
+    "damcikurt2016",
+    "dayarian2019",
+    "delorme2020",
+    "eiselt2009",
+    "fragkos2016",
+    "hosseinian2020",
+    "kang2021",
+    "laporte2003",
+    "legrain2024",
+    "ribeiro1994",
+    "riley2025",
+    "rostami2021",
+    "sadykov2013",
+    "sansegundo2016",
+    "schwerdfeger2016",
+    "watermeyer2023",
+    "wu2018",
+    "zetina2020"
   ],
   "test_tasks": [
     "araujo2020",
@@ -186,452 +188,1413 @@
     "zohali2022"
   ],
   "rationale": {
-    "algorithm": "deterministic multi-start local search over stratification error",
-    "seed": 20260831,
-    "objective_score": 4.433043144328,
-    "test_task_count": 30,
-    "train_task_count": 150,
-    "stratification_dimensions": [
-      "category",
-      "formulation_type",
-      "application_field",
-      "direction",
-      "task median Gurobi runtime quartile",
-      "model-size quartile",
-      "publication-year bin",
-      "problem_class when represented by at least four tasks"
-    ],
-    "leakage_constraint": "earl2005 and its legacy alias ostrowski2012 are forced into train together; singleton problem classes, formulations, and application fields stay in train; every test-side type retains at least one train exemplar",
-    "forced_train_tasks": [
-      "amaldi2013",
-      "armbruster2012",
-      "belhoul2014",
-      "bollapragada2001",
-      "borndorfer2007",
-      "bront2009",
-      "castro2021",
-      "chen1999",
-      "dienstknecht2024",
-      "earl2005",
-      "forrest2006",
-      "frey2017",
-      "lai2021",
-      "ostrowski2012",
-      "rahimian2017",
-      "roberti2015",
-      "savelsbergh1997",
-      "song2021",
-      "wang2025",
-      "wangy2020"
-    ],
+    "partition": "130 train / 20 holdout / 30 final test",
+    "test_selection": {
+      "algorithm": "deterministic multi-start local search over stratification error",
+      "seed": 20260831,
+      "objective_score": 4.433043144328,
+      "test_task_count": 30,
+      "train_task_count": 150,
+      "stratification_dimensions": [
+        "category",
+        "formulation_type",
+        "application_field",
+        "direction",
+        "task median Gurobi runtime quartile",
+        "model-size quartile",
+        "publication-year bin",
+        "problem_class when represented by at least four tasks"
+      ],
+      "leakage_constraint": "earl2005 and its legacy alias ostrowski2012 are forced into train together; singleton problem classes, formulations, and application fields stay in train; every test-side type retains at least one train exemplar",
+      "forced_train_tasks": [
+        "amaldi2013",
+        "armbruster2012",
+        "belhoul2014",
+        "bollapragada2001",
+        "borndorfer2007",
+        "bront2009",
+        "castro2021",
+        "chen1999",
+        "dienstknecht2024",
+        "earl2005",
+        "forrest2006",
+        "frey2017",
+        "lai2021",
+        "ostrowski2012",
+        "rahimian2017",
+        "roberti2015",
+        "savelsbergh1997",
+        "song2021",
+        "wang2025",
+        "wangy2020"
+      ],
+      "balance": [
+        {
+          "dimension": "application",
+          "value": "Aerospace & Aviation",
+          "all_tasks": 7,
+          "train_tasks": 6,
+          "test_tasks": 1,
+          "target_test_tasks": 1.167
+        },
+        {
+          "dimension": "application",
+          "value": "Energy & Power Systems",
+          "all_tasks": 7,
+          "train_tasks": 6,
+          "test_tasks": 1,
+          "target_test_tasks": 1.167
+        },
+        {
+          "dimension": "application",
+          "value": "Finance & Investment",
+          "all_tasks": 3,
+          "train_tasks": 2,
+          "test_tasks": 1,
+          "target_test_tasks": 0.5
+        },
+        {
+          "dimension": "application",
+          "value": "Foundational / Theoretical",
+          "all_tasks": 52,
+          "train_tasks": 43,
+          "test_tasks": 9,
+          "target_test_tasks": 8.667
+        },
+        {
+          "dimension": "application",
+          "value": "Healthcare",
+          "all_tasks": 6,
+          "train_tasks": 5,
+          "test_tasks": 1,
+          "target_test_tasks": 1.0
+        },
+        {
+          "dimension": "application",
+          "value": "Manufacturing & Production",
+          "all_tasks": 32,
+          "train_tasks": 27,
+          "test_tasks": 5,
+          "target_test_tasks": 5.333
+        },
+        {
+          "dimension": "application",
+          "value": "Public Service & Government",
+          "all_tasks": 2,
+          "train_tasks": 2,
+          "test_tasks": 0,
+          "target_test_tasks": 0.333
+        },
+        {
+          "dimension": "application",
+          "value": "Public Transit & Mobility",
+          "all_tasks": 8,
+          "train_tasks": 7,
+          "test_tasks": 1,
+          "target_test_tasks": 1.333
+        },
+        {
+          "dimension": "application",
+          "value": "Retail & Revenue Management",
+          "all_tasks": 1,
+          "train_tasks": 1,
+          "test_tasks": 0,
+          "target_test_tasks": 0.167
+        },
+        {
+          "dimension": "application",
+          "value": "Sports & Entertainment",
+          "all_tasks": 2,
+          "train_tasks": 2,
+          "test_tasks": 0,
+          "target_test_tasks": 0.333
+        },
+        {
+          "dimension": "application",
+          "value": "Supply Chain & Inventory",
+          "all_tasks": 10,
+          "train_tasks": 8,
+          "test_tasks": 2,
+          "target_test_tasks": 1.667
+        },
+        {
+          "dimension": "application",
+          "value": "Telecommunications & Networking",
+          "all_tasks": 4,
+          "train_tasks": 3,
+          "test_tasks": 1,
+          "target_test_tasks": 0.667
+        },
+        {
+          "dimension": "application",
+          "value": "Transportation & Logistics",
+          "all_tasks": 46,
+          "train_tasks": 38,
+          "test_tasks": 8,
+          "target_test_tasks": 7.667
+        },
+        {
+          "dimension": "category",
+          "value": "operational",
+          "all_tasks": 61,
+          "train_tasks": 51,
+          "test_tasks": 10,
+          "target_test_tasks": 10.167
+        },
+        {
+          "dimension": "category",
+          "value": "planning",
+          "all_tasks": 79,
+          "train_tasks": 66,
+          "test_tasks": 13,
+          "target_test_tasks": 13.167
+        },
+        {
+          "dimension": "category",
+          "value": "strategic",
+          "all_tasks": 40,
+          "train_tasks": 33,
+          "test_tasks": 7,
+          "target_test_tasks": 6.667
+        },
+        {
+          "dimension": "direction",
+          "value": "max",
+          "all_tasks": 33,
+          "train_tasks": 27,
+          "test_tasks": 6,
+          "target_test_tasks": 5.5
+        },
+        {
+          "dimension": "direction",
+          "value": "min",
+          "all_tasks": 147,
+          "train_tasks": 123,
+          "test_tasks": 24,
+          "target_test_tasks": 24.5
+        },
+        {
+          "dimension": "formulation",
+          "value": "BIP",
+          "all_tasks": 29,
+          "train_tasks": 24,
+          "test_tasks": 5,
+          "target_test_tasks": 4.833
+        },
+        {
+          "dimension": "formulation",
+          "value": "Bilevel/Multi-level",
+          "all_tasks": 4,
+          "train_tasks": 3,
+          "test_tasks": 1,
+          "target_test_tasks": 0.667
+        },
+        {
+          "dimension": "formulation",
+          "value": "CP",
+          "all_tasks": 8,
+          "train_tasks": 7,
+          "test_tasks": 1,
+          "target_test_tasks": 1.333
+        },
+        {
+          "dimension": "formulation",
+          "value": "IP",
+          "all_tasks": 30,
+          "train_tasks": 25,
+          "test_tasks": 5,
+          "target_test_tasks": 5.0
+        },
+        {
+          "dimension": "formulation",
+          "value": "MIP",
+          "all_tasks": 76,
+          "train_tasks": 63,
+          "test_tasks": 13,
+          "target_test_tasks": 12.667
+        },
+        {
+          "dimension": "formulation",
+          "value": "NLP/MINLP",
+          "all_tasks": 2,
+          "train_tasks": 2,
+          "test_tasks": 0,
+          "target_test_tasks": 0.333
+        },
+        {
+          "dimension": "formulation",
+          "value": "QP/MIQP",
+          "all_tasks": 9,
+          "train_tasks": 7,
+          "test_tasks": 2,
+          "target_test_tasks": 1.5
+        },
+        {
+          "dimension": "formulation",
+          "value": "SDP",
+          "all_tasks": 1,
+          "train_tasks": 1,
+          "test_tasks": 0,
+          "target_test_tasks": 0.167
+        },
+        {
+          "dimension": "formulation",
+          "value": "Stochastic/Robust/DRO",
+          "all_tasks": 21,
+          "train_tasks": 18,
+          "test_tasks": 3,
+          "target_test_tasks": 3.5
+        },
+        {
+          "dimension": "problem",
+          "value": "Energy & Unit Commitment",
+          "all_tasks": 6,
+          "train_tasks": 5,
+          "test_tasks": 1,
+          "target_test_tasks": 1.0
+        },
+        {
+          "dimension": "problem",
+          "value": "Facility Location",
+          "all_tasks": 13,
+          "train_tasks": 11,
+          "test_tasks": 2,
+          "target_test_tasks": 2.167
+        },
+        {
+          "dimension": "problem",
+          "value": "Graph Optimization",
+          "all_tasks": 19,
+          "train_tasks": 16,
+          "test_tasks": 3,
+          "target_test_tasks": 3.167
+        },
+        {
+          "dimension": "problem",
+          "value": "Lot Sizing / Inventory",
+          "all_tasks": 14,
+          "train_tasks": 12,
+          "test_tasks": 2,
+          "target_test_tasks": 2.333
+        },
+        {
+          "dimension": "problem",
+          "value": "Network Design & Flow",
+          "all_tasks": 5,
+          "train_tasks": 4,
+          "test_tasks": 1,
+          "target_test_tasks": 0.833
+        },
+        {
+          "dimension": "problem",
+          "value": "Other (Container Terminal)",
+          "all_tasks": 4,
+          "train_tasks": 3,
+          "test_tasks": 1,
+          "target_test_tasks": 0.667
+        },
+        {
+          "dimension": "problem",
+          "value": "Other (Project Scheduling)",
+          "all_tasks": 5,
+          "train_tasks": 4,
+          "test_tasks": 1,
+          "target_test_tasks": 0.833
+        },
+        {
+          "dimension": "problem",
+          "value": "Packing / Cutting Stock",
+          "all_tasks": 17,
+          "train_tasks": 14,
+          "test_tasks": 3,
+          "target_test_tasks": 2.833
+        },
+        {
+          "dimension": "problem",
+          "value": "Scheduling (Machine / Crew / Workforce)",
+          "all_tasks": 17,
+          "train_tasks": 14,
+          "test_tasks": 3,
+          "target_test_tasks": 2.833
+        },
+        {
+          "dimension": "problem",
+          "value": "Stochastic / Robust / Bilevel Optimization",
+          "all_tasks": 11,
+          "train_tasks": 9,
+          "test_tasks": 2,
+          "target_test_tasks": 1.833
+        },
+        {
+          "dimension": "problem",
+          "value": "Vehicle Routing & TSP",
+          "all_tasks": 30,
+          "train_tasks": 25,
+          "test_tasks": 5,
+          "target_test_tasks": 5.0
+        },
+        {
+          "dimension": "problem",
+          "value": "Vehicle Scheduling",
+          "all_tasks": 6,
+          "train_tasks": 5,
+          "test_tasks": 1,
+          "target_test_tasks": 1.0
+        },
+        {
+          "dimension": "runtime",
+          "value": "Q1",
+          "all_tasks": 45,
+          "train_tasks": 38,
+          "test_tasks": 7,
+          "target_test_tasks": 7.5
+        },
+        {
+          "dimension": "runtime",
+          "value": "Q2",
+          "all_tasks": 45,
+          "train_tasks": 37,
+          "test_tasks": 8,
+          "target_test_tasks": 7.5
+        },
+        {
+          "dimension": "runtime",
+          "value": "Q3",
+          "all_tasks": 45,
+          "train_tasks": 37,
+          "test_tasks": 8,
+          "target_test_tasks": 7.5
+        },
+        {
+          "dimension": "runtime",
+          "value": "Q4",
+          "all_tasks": 45,
+          "train_tasks": 38,
+          "test_tasks": 7,
+          "target_test_tasks": 7.5
+        },
+        {
+          "dimension": "size",
+          "value": "Q1",
+          "all_tasks": 45,
+          "train_tasks": 37,
+          "test_tasks": 8,
+          "target_test_tasks": 7.5
+        },
+        {
+          "dimension": "size",
+          "value": "Q2",
+          "all_tasks": 45,
+          "train_tasks": 38,
+          "test_tasks": 7,
+          "target_test_tasks": 7.5
+        },
+        {
+          "dimension": "size",
+          "value": "Q3",
+          "all_tasks": 45,
+          "train_tasks": 37,
+          "test_tasks": 8,
+          "target_test_tasks": 7.5
+        },
+        {
+          "dimension": "size",
+          "value": "Q4",
+          "all_tasks": 45,
+          "train_tasks": 38,
+          "test_tasks": 7,
+          "target_test_tasks": 7.5
+        },
+        {
+          "dimension": "year",
+          "value": "2010-2014",
+          "all_tasks": 19,
+          "train_tasks": 16,
+          "test_tasks": 3,
+          "target_test_tasks": 3.167
+        },
+        {
+          "dimension": "year",
+          "value": "2015-2019",
+          "all_tasks": 58,
+          "train_tasks": 48,
+          "test_tasks": 10,
+          "target_test_tasks": 9.667
+        },
+        {
+          "dimension": "year",
+          "value": "2020+",
+          "all_tasks": 69,
+          "train_tasks": 58,
+          "test_tasks": 11,
+          "target_test_tasks": 11.5
+        },
+        {
+          "dimension": "year",
+          "value": "pre-2010",
+          "all_tasks": 34,
+          "train_tasks": 28,
+          "test_tasks": 6,
+          "target_test_tasks": 5.667
+        }
+      ]
+    },
+    "holdout_selection": {
+      "algorithm": "deterministic multi-start local search over stratification error",
+      "seed": 20260832,
+      "objective_score": 5.217592321684,
+      "train_task_count": 130,
+      "holdout_task_count": 20,
+      "test_task_count": 30,
+      "holdout_source": "selected only from the frozen 150-task training pool",
+      "role": "holdout is for model selection and tuning; final test remains untouched",
+      "coverage_constraint": "every problem class, formulation type, and application field appearing in holdout or test retains at least one train exemplar; the alias pair stays in train",
+      "forced_train_tasks": [
+        "amaldi2013",
+        "armbruster2012",
+        "belhoul2014",
+        "bollapragada2001",
+        "borndorfer2007",
+        "bront2009",
+        "castro2021",
+        "chen1999",
+        "dienstknecht2024",
+        "earl2005",
+        "forrest2006",
+        "frey2017",
+        "lai2021",
+        "ostrowski2012",
+        "pinnoi1997",
+        "rahimian2017",
+        "roberti2015",
+        "savelsbergh1997",
+        "song2021",
+        "wang2025",
+        "wangy2020",
+        "yang2013",
+        "zhang2025"
+      ],
+      "balance": [
+        {
+          "dimension": "application",
+          "value": "Aerospace & Aviation",
+          "all_tasks": 7,
+          "train_tasks": 5,
+          "holdout_tasks": 1,
+          "test_tasks": 1,
+          "target_holdout_tasks": 0.8
+        },
+        {
+          "dimension": "application",
+          "value": "Energy & Power Systems",
+          "all_tasks": 7,
+          "train_tasks": 5,
+          "holdout_tasks": 1,
+          "test_tasks": 1,
+          "target_holdout_tasks": 0.8
+        },
+        {
+          "dimension": "application",
+          "value": "Finance & Investment",
+          "all_tasks": 3,
+          "train_tasks": 2,
+          "holdout_tasks": 0,
+          "test_tasks": 1,
+          "target_holdout_tasks": 0.267
+        },
+        {
+          "dimension": "application",
+          "value": "Foundational / Theoretical",
+          "all_tasks": 52,
+          "train_tasks": 37,
+          "holdout_tasks": 6,
+          "test_tasks": 9,
+          "target_holdout_tasks": 5.733
+        },
+        {
+          "dimension": "application",
+          "value": "Healthcare",
+          "all_tasks": 6,
+          "train_tasks": 4,
+          "holdout_tasks": 1,
+          "test_tasks": 1,
+          "target_holdout_tasks": 0.667
+        },
+        {
+          "dimension": "application",
+          "value": "Manufacturing & Production",
+          "all_tasks": 32,
+          "train_tasks": 23,
+          "holdout_tasks": 4,
+          "test_tasks": 5,
+          "target_holdout_tasks": 3.6
+        },
+        {
+          "dimension": "application",
+          "value": "Public Service & Government",
+          "all_tasks": 2,
+          "train_tasks": 2,
+          "holdout_tasks": 0,
+          "test_tasks": 0,
+          "target_holdout_tasks": 0.267
+        },
+        {
+          "dimension": "application",
+          "value": "Public Transit & Mobility",
+          "all_tasks": 8,
+          "train_tasks": 6,
+          "holdout_tasks": 1,
+          "test_tasks": 1,
+          "target_holdout_tasks": 0.933
+        },
+        {
+          "dimension": "application",
+          "value": "Retail & Revenue Management",
+          "all_tasks": 1,
+          "train_tasks": 1,
+          "holdout_tasks": 0,
+          "test_tasks": 0,
+          "target_holdout_tasks": 0.133
+        },
+        {
+          "dimension": "application",
+          "value": "Sports & Entertainment",
+          "all_tasks": 2,
+          "train_tasks": 2,
+          "holdout_tasks": 0,
+          "test_tasks": 0,
+          "target_holdout_tasks": 0.267
+        },
+        {
+          "dimension": "application",
+          "value": "Supply Chain & Inventory",
+          "all_tasks": 10,
+          "train_tasks": 7,
+          "holdout_tasks": 1,
+          "test_tasks": 2,
+          "target_holdout_tasks": 1.067
+        },
+        {
+          "dimension": "application",
+          "value": "Telecommunications & Networking",
+          "all_tasks": 4,
+          "train_tasks": 3,
+          "holdout_tasks": 0,
+          "test_tasks": 1,
+          "target_holdout_tasks": 0.4
+        },
+        {
+          "dimension": "application",
+          "value": "Transportation & Logistics",
+          "all_tasks": 46,
+          "train_tasks": 33,
+          "holdout_tasks": 5,
+          "test_tasks": 8,
+          "target_holdout_tasks": 5.067
+        },
+        {
+          "dimension": "category",
+          "value": "operational",
+          "all_tasks": 61,
+          "train_tasks": 44,
+          "holdout_tasks": 7,
+          "test_tasks": 10,
+          "target_holdout_tasks": 6.8
+        },
+        {
+          "dimension": "category",
+          "value": "planning",
+          "all_tasks": 79,
+          "train_tasks": 57,
+          "holdout_tasks": 9,
+          "test_tasks": 13,
+          "target_holdout_tasks": 8.8
+        },
+        {
+          "dimension": "category",
+          "value": "strategic",
+          "all_tasks": 40,
+          "train_tasks": 29,
+          "holdout_tasks": 4,
+          "test_tasks": 7,
+          "target_holdout_tasks": 4.4
+        },
+        {
+          "dimension": "direction",
+          "value": "max",
+          "all_tasks": 33,
+          "train_tasks": 23,
+          "holdout_tasks": 4,
+          "test_tasks": 6,
+          "target_holdout_tasks": 3.6
+        },
+        {
+          "dimension": "direction",
+          "value": "min",
+          "all_tasks": 147,
+          "train_tasks": 107,
+          "holdout_tasks": 16,
+          "test_tasks": 24,
+          "target_holdout_tasks": 16.4
+        },
+        {
+          "dimension": "formulation",
+          "value": "BIP",
+          "all_tasks": 29,
+          "train_tasks": 21,
+          "holdout_tasks": 3,
+          "test_tasks": 5,
+          "target_holdout_tasks": 3.2
+        },
+        {
+          "dimension": "formulation",
+          "value": "Bilevel/Multi-level",
+          "all_tasks": 4,
+          "train_tasks": 3,
+          "holdout_tasks": 0,
+          "test_tasks": 1,
+          "target_holdout_tasks": 0.4
+        },
+        {
+          "dimension": "formulation",
+          "value": "CP",
+          "all_tasks": 8,
+          "train_tasks": 6,
+          "holdout_tasks": 1,
+          "test_tasks": 1,
+          "target_holdout_tasks": 0.933
+        },
+        {
+          "dimension": "formulation",
+          "value": "IP",
+          "all_tasks": 30,
+          "train_tasks": 21,
+          "holdout_tasks": 4,
+          "test_tasks": 5,
+          "target_holdout_tasks": 3.333
+        },
+        {
+          "dimension": "formulation",
+          "value": "MIP",
+          "all_tasks": 76,
+          "train_tasks": 55,
+          "holdout_tasks": 8,
+          "test_tasks": 13,
+          "target_holdout_tasks": 8.4
+        },
+        {
+          "dimension": "formulation",
+          "value": "NLP/MINLP",
+          "all_tasks": 2,
+          "train_tasks": 2,
+          "holdout_tasks": 0,
+          "test_tasks": 0,
+          "target_holdout_tasks": 0.267
+        },
+        {
+          "dimension": "formulation",
+          "value": "QP/MIQP",
+          "all_tasks": 9,
+          "train_tasks": 6,
+          "holdout_tasks": 1,
+          "test_tasks": 2,
+          "target_holdout_tasks": 0.933
+        },
+        {
+          "dimension": "formulation",
+          "value": "SDP",
+          "all_tasks": 1,
+          "train_tasks": 1,
+          "holdout_tasks": 0,
+          "test_tasks": 0,
+          "target_holdout_tasks": 0.133
+        },
+        {
+          "dimension": "formulation",
+          "value": "Stochastic/Robust/DRO",
+          "all_tasks": 21,
+          "train_tasks": 15,
+          "holdout_tasks": 3,
+          "test_tasks": 3,
+          "target_holdout_tasks": 2.4
+        },
+        {
+          "dimension": "problem",
+          "value": "Energy & Unit Commitment",
+          "all_tasks": 6,
+          "train_tasks": 4,
+          "holdout_tasks": 1,
+          "test_tasks": 1,
+          "target_holdout_tasks": 0.667
+        },
+        {
+          "dimension": "problem",
+          "value": "Facility Location",
+          "all_tasks": 13,
+          "train_tasks": 9,
+          "holdout_tasks": 2,
+          "test_tasks": 2,
+          "target_holdout_tasks": 1.467
+        },
+        {
+          "dimension": "problem",
+          "value": "Graph Optimization",
+          "all_tasks": 19,
+          "train_tasks": 14,
+          "holdout_tasks": 2,
+          "test_tasks": 3,
+          "target_holdout_tasks": 2.133
+        },
+        {
+          "dimension": "problem",
+          "value": "Lot Sizing / Inventory",
+          "all_tasks": 14,
+          "train_tasks": 10,
+          "holdout_tasks": 2,
+          "test_tasks": 2,
+          "target_holdout_tasks": 1.6
+        },
+        {
+          "dimension": "problem",
+          "value": "Network Design & Flow",
+          "all_tasks": 5,
+          "train_tasks": 4,
+          "holdout_tasks": 0,
+          "test_tasks": 1,
+          "target_holdout_tasks": 0.533
+        },
+        {
+          "dimension": "problem",
+          "value": "Other (Container Terminal)",
+          "all_tasks": 4,
+          "train_tasks": 3,
+          "holdout_tasks": 0,
+          "test_tasks": 1,
+          "target_holdout_tasks": 0.4
+        },
+        {
+          "dimension": "problem",
+          "value": "Other (Project Scheduling)",
+          "all_tasks": 5,
+          "train_tasks": 3,
+          "holdout_tasks": 1,
+          "test_tasks": 1,
+          "target_holdout_tasks": 0.533
+        },
+        {
+          "dimension": "problem",
+          "value": "Packing / Cutting Stock",
+          "all_tasks": 17,
+          "train_tasks": 12,
+          "holdout_tasks": 2,
+          "test_tasks": 3,
+          "target_holdout_tasks": 1.867
+        },
+        {
+          "dimension": "problem",
+          "value": "Scheduling (Machine / Crew / Workforce)",
+          "all_tasks": 17,
+          "train_tasks": 12,
+          "holdout_tasks": 2,
+          "test_tasks": 3,
+          "target_holdout_tasks": 1.867
+        },
+        {
+          "dimension": "problem",
+          "value": "Stochastic / Robust / Bilevel Optimization",
+          "all_tasks": 11,
+          "train_tasks": 8,
+          "holdout_tasks": 1,
+          "test_tasks": 2,
+          "target_holdout_tasks": 1.2
+        },
+        {
+          "dimension": "problem",
+          "value": "Vehicle Routing & TSP",
+          "all_tasks": 30,
+          "train_tasks": 21,
+          "holdout_tasks": 4,
+          "test_tasks": 5,
+          "target_holdout_tasks": 3.333
+        },
+        {
+          "dimension": "problem",
+          "value": "Vehicle Scheduling",
+          "all_tasks": 6,
+          "train_tasks": 4,
+          "holdout_tasks": 1,
+          "test_tasks": 1,
+          "target_holdout_tasks": 0.667
+        },
+        {
+          "dimension": "runtime",
+          "value": "Q1",
+          "all_tasks": 45,
+          "train_tasks": 33,
+          "holdout_tasks": 5,
+          "test_tasks": 7,
+          "target_holdout_tasks": 5.067
+        },
+        {
+          "dimension": "runtime",
+          "value": "Q2",
+          "all_tasks": 45,
+          "train_tasks": 32,
+          "holdout_tasks": 5,
+          "test_tasks": 8,
+          "target_holdout_tasks": 4.933
+        },
+        {
+          "dimension": "runtime",
+          "value": "Q3",
+          "all_tasks": 45,
+          "train_tasks": 32,
+          "holdout_tasks": 5,
+          "test_tasks": 8,
+          "target_holdout_tasks": 4.933
+        },
+        {
+          "dimension": "runtime",
+          "value": "Q4",
+          "all_tasks": 45,
+          "train_tasks": 33,
+          "holdout_tasks": 5,
+          "test_tasks": 7,
+          "target_holdout_tasks": 5.067
+        },
+        {
+          "dimension": "size",
+          "value": "Q1",
+          "all_tasks": 45,
+          "train_tasks": 32,
+          "holdout_tasks": 5,
+          "test_tasks": 8,
+          "target_holdout_tasks": 4.933
+        },
+        {
+          "dimension": "size",
+          "value": "Q2",
+          "all_tasks": 45,
+          "train_tasks": 33,
+          "holdout_tasks": 5,
+          "test_tasks": 7,
+          "target_holdout_tasks": 5.067
+        },
+        {
+          "dimension": "size",
+          "value": "Q3",
+          "all_tasks": 45,
+          "train_tasks": 32,
+          "holdout_tasks": 5,
+          "test_tasks": 8,
+          "target_holdout_tasks": 4.933
+        },
+        {
+          "dimension": "size",
+          "value": "Q4",
+          "all_tasks": 45,
+          "train_tasks": 33,
+          "holdout_tasks": 5,
+          "test_tasks": 7,
+          "target_holdout_tasks": 5.067
+        },
+        {
+          "dimension": "year",
+          "value": "2010-2014",
+          "all_tasks": 19,
+          "train_tasks": 14,
+          "holdout_tasks": 2,
+          "test_tasks": 3,
+          "target_holdout_tasks": 2.133
+        },
+        {
+          "dimension": "year",
+          "value": "2015-2019",
+          "all_tasks": 58,
+          "train_tasks": 41,
+          "holdout_tasks": 7,
+          "test_tasks": 10,
+          "target_holdout_tasks": 6.4
+        },
+        {
+          "dimension": "year",
+          "value": "2020+",
+          "all_tasks": 69,
+          "train_tasks": 50,
+          "holdout_tasks": 8,
+          "test_tasks": 11,
+          "target_holdout_tasks": 7.733
+        },
+        {
+          "dimension": "year",
+          "value": "pre-2010",
+          "all_tasks": 34,
+          "train_tasks": 25,
+          "holdout_tasks": 3,
+          "test_tasks": 6,
+          "target_holdout_tasks": 3.733
+        }
+      ]
+    },
     "balance": [
       {
         "dimension": "application",
         "value": "Aerospace & Aviation",
         "all_tasks": 7,
-        "train_tasks": 6,
+        "train_tasks": 5,
+        "holdout_tasks": 1,
         "test_tasks": 1,
-        "target_test_tasks": 1.167
+        "target_holdout_tasks": 0.8
       },
       {
         "dimension": "application",
         "value": "Energy & Power Systems",
         "all_tasks": 7,
-        "train_tasks": 6,
+        "train_tasks": 5,
+        "holdout_tasks": 1,
         "test_tasks": 1,
-        "target_test_tasks": 1.167
+        "target_holdout_tasks": 0.8
       },
       {
         "dimension": "application",
         "value": "Finance & Investment",
         "all_tasks": 3,
         "train_tasks": 2,
+        "holdout_tasks": 0,
         "test_tasks": 1,
-        "target_test_tasks": 0.5
+        "target_holdout_tasks": 0.267
       },
       {
         "dimension": "application",
         "value": "Foundational / Theoretical",
         "all_tasks": 52,
-        "train_tasks": 43,
+        "train_tasks": 37,
+        "holdout_tasks": 6,
         "test_tasks": 9,
-        "target_test_tasks": 8.667
+        "target_holdout_tasks": 5.733
       },
       {
         "dimension": "application",
         "value": "Healthcare",
         "all_tasks": 6,
-        "train_tasks": 5,
+        "train_tasks": 4,
+        "holdout_tasks": 1,
         "test_tasks": 1,
-        "target_test_tasks": 1.0
+        "target_holdout_tasks": 0.667
       },
       {
         "dimension": "application",
         "value": "Manufacturing & Production",
         "all_tasks": 32,
-        "train_tasks": 27,
+        "train_tasks": 23,
+        "holdout_tasks": 4,
         "test_tasks": 5,
-        "target_test_tasks": 5.333
+        "target_holdout_tasks": 3.6
       },
       {
         "dimension": "application",
         "value": "Public Service & Government",
         "all_tasks": 2,
         "train_tasks": 2,
+        "holdout_tasks": 0,
         "test_tasks": 0,
-        "target_test_tasks": 0.333
+        "target_holdout_tasks": 0.267
       },
       {
         "dimension": "application",
         "value": "Public Transit & Mobility",
         "all_tasks": 8,
-        "train_tasks": 7,
+        "train_tasks": 6,
+        "holdout_tasks": 1,
         "test_tasks": 1,
-        "target_test_tasks": 1.333
+        "target_holdout_tasks": 0.933
       },
       {
         "dimension": "application",
         "value": "Retail & Revenue Management",
         "all_tasks": 1,
         "train_tasks": 1,
+        "holdout_tasks": 0,
         "test_tasks": 0,
-        "target_test_tasks": 0.167
+        "target_holdout_tasks": 0.133
       },
       {
         "dimension": "application",
         "value": "Sports & Entertainment",
         "all_tasks": 2,
         "train_tasks": 2,
+        "holdout_tasks": 0,
         "test_tasks": 0,
-        "target_test_tasks": 0.333
+        "target_holdout_tasks": 0.267
       },
       {
         "dimension": "application",
         "value": "Supply Chain & Inventory",
         "all_tasks": 10,
-        "train_tasks": 8,
+        "train_tasks": 7,
+        "holdout_tasks": 1,
         "test_tasks": 2,
-        "target_test_tasks": 1.667
+        "target_holdout_tasks": 1.067
       },
       {
         "dimension": "application",
         "value": "Telecommunications & Networking",
         "all_tasks": 4,
         "train_tasks": 3,
+        "holdout_tasks": 0,
         "test_tasks": 1,
-        "target_test_tasks": 0.667
+        "target_holdout_tasks": 0.4
       },
       {
         "dimension": "application",
         "value": "Transportation & Logistics",
         "all_tasks": 46,
-        "train_tasks": 38,
+        "train_tasks": 33,
+        "holdout_tasks": 5,
         "test_tasks": 8,
-        "target_test_tasks": 7.667
+        "target_holdout_tasks": 5.067
       },
       {
         "dimension": "category",
         "value": "operational",
         "all_tasks": 61,
-        "train_tasks": 51,
+        "train_tasks": 44,
+        "holdout_tasks": 7,
         "test_tasks": 10,
-        "target_test_tasks": 10.167
+        "target_holdout_tasks": 6.8
       },
       {
         "dimension": "category",
         "value": "planning",
         "all_tasks": 79,
-        "train_tasks": 66,
+        "train_tasks": 57,
+        "holdout_tasks": 9,
         "test_tasks": 13,
-        "target_test_tasks": 13.167
+        "target_holdout_tasks": 8.8
       },
       {
         "dimension": "category",
         "value": "strategic",
         "all_tasks": 40,
-        "train_tasks": 33,
+        "train_tasks": 29,
+        "holdout_tasks": 4,
         "test_tasks": 7,
-        "target_test_tasks": 6.667
+        "target_holdout_tasks": 4.4
       },
       {
         "dimension": "direction",
         "value": "max",
         "all_tasks": 33,
-        "train_tasks": 27,
+        "train_tasks": 23,
+        "holdout_tasks": 4,
         "test_tasks": 6,
-        "target_test_tasks": 5.5
+        "target_holdout_tasks": 3.6
       },
       {
         "dimension": "direction",
         "value": "min",
         "all_tasks": 147,
-        "train_tasks": 123,
+        "train_tasks": 107,
+        "holdout_tasks": 16,
         "test_tasks": 24,
-        "target_test_tasks": 24.5
+        "target_holdout_tasks": 16.4
       },
       {
         "dimension": "formulation",
         "value": "BIP",
         "all_tasks": 29,
-        "train_tasks": 24,
+        "train_tasks": 21,
+        "holdout_tasks": 3,
         "test_tasks": 5,
-        "target_test_tasks": 4.833
+        "target_holdout_tasks": 3.2
       },
       {
         "dimension": "formulation",
         "value": "Bilevel/Multi-level",
         "all_tasks": 4,
         "train_tasks": 3,
+        "holdout_tasks": 0,
         "test_tasks": 1,
-        "target_test_tasks": 0.667
+        "target_holdout_tasks": 0.4
       },
       {
         "dimension": "formulation",
         "value": "CP",
         "all_tasks": 8,
-        "train_tasks": 7,
+        "train_tasks": 6,
+        "holdout_tasks": 1,
         "test_tasks": 1,
-        "target_test_tasks": 1.333
+        "target_holdout_tasks": 0.933
       },
       {
         "dimension": "formulation",
         "value": "IP",
         "all_tasks": 30,
-        "train_tasks": 25,
+        "train_tasks": 21,
+        "holdout_tasks": 4,
         "test_tasks": 5,
-        "target_test_tasks": 5.0
+        "target_holdout_tasks": 3.333
       },
       {
         "dimension": "formulation",
         "value": "MIP",
         "all_tasks": 76,
-        "train_tasks": 63,
+        "train_tasks": 55,
+        "holdout_tasks": 8,
         "test_tasks": 13,
-        "target_test_tasks": 12.667
+        "target_holdout_tasks": 8.4
       },
       {
         "dimension": "formulation",
         "value": "NLP/MINLP",
         "all_tasks": 2,
         "train_tasks": 2,
+        "holdout_tasks": 0,
         "test_tasks": 0,
-        "target_test_tasks": 0.333
+        "target_holdout_tasks": 0.267
       },
       {
         "dimension": "formulation",
         "value": "QP/MIQP",
         "all_tasks": 9,
-        "train_tasks": 7,
+        "train_tasks": 6,
+        "holdout_tasks": 1,
         "test_tasks": 2,
-        "target_test_tasks": 1.5
+        "target_holdout_tasks": 0.933
       },
       {
         "dimension": "formulation",
         "value": "SDP",
         "all_tasks": 1,
         "train_tasks": 1,
+        "holdout_tasks": 0,
         "test_tasks": 0,
-        "target_test_tasks": 0.167
+        "target_holdout_tasks": 0.133
       },
       {
         "dimension": "formulation",
         "value": "Stochastic/Robust/DRO",
         "all_tasks": 21,
-        "train_tasks": 18,
+        "train_tasks": 15,
+        "holdout_tasks": 3,
         "test_tasks": 3,
-        "target_test_tasks": 3.5
+        "target_holdout_tasks": 2.4
       },
       {
         "dimension": "problem",
         "value": "Energy & Unit Commitment",
         "all_tasks": 6,
-        "train_tasks": 5,
+        "train_tasks": 4,
+        "holdout_tasks": 1,
         "test_tasks": 1,
-        "target_test_tasks": 1.0
+        "target_holdout_tasks": 0.667
       },
       {
         "dimension": "problem",
         "value": "Facility Location",
         "all_tasks": 13,
-        "train_tasks": 11,
+        "train_tasks": 9,
+        "holdout_tasks": 2,
         "test_tasks": 2,
-        "target_test_tasks": 2.167
+        "target_holdout_tasks": 1.467
       },
       {
         "dimension": "problem",
         "value": "Graph Optimization",
         "all_tasks": 19,
-        "train_tasks": 16,
+        "train_tasks": 14,
+        "holdout_tasks": 2,
         "test_tasks": 3,
-        "target_test_tasks": 3.167
+        "target_holdout_tasks": 2.133
       },
       {
         "dimension": "problem",
         "value": "Lot Sizing / Inventory",
         "all_tasks": 14,
-        "train_tasks": 12,
+        "train_tasks": 10,
+        "holdout_tasks": 2,
         "test_tasks": 2,
-        "target_test_tasks": 2.333
+        "target_holdout_tasks": 1.6
       },
       {
         "dimension": "problem",
         "value": "Network Design & Flow",
         "all_tasks": 5,
         "train_tasks": 4,
+        "holdout_tasks": 0,
         "test_tasks": 1,
-        "target_test_tasks": 0.833
+        "target_holdout_tasks": 0.533
       },
       {
         "dimension": "problem",
         "value": "Other (Container Terminal)",
         "all_tasks": 4,
         "train_tasks": 3,
+        "holdout_tasks": 0,
         "test_tasks": 1,
-        "target_test_tasks": 0.667
+        "target_holdout_tasks": 0.4
       },
       {
         "dimension": "problem",
         "value": "Other (Project Scheduling)",
         "all_tasks": 5,
-        "train_tasks": 4,
+        "train_tasks": 3,
+        "holdout_tasks": 1,
         "test_tasks": 1,
-        "target_test_tasks": 0.833
+        "target_holdout_tasks": 0.533
       },
       {
         "dimension": "problem",
         "value": "Packing / Cutting Stock",
         "all_tasks": 17,
-        "train_tasks": 14,
+        "train_tasks": 12,
+        "holdout_tasks": 2,
         "test_tasks": 3,
-        "target_test_tasks": 2.833
+        "target_holdout_tasks": 1.867
       },
       {
         "dimension": "problem",
         "value": "Scheduling (Machine / Crew / Workforce)",
         "all_tasks": 17,
-        "train_tasks": 14,
+        "train_tasks": 12,
+        "holdout_tasks": 2,
         "test_tasks": 3,
-        "target_test_tasks": 2.833
+        "target_holdout_tasks": 1.867
       },
       {
         "dimension": "problem",
         "value": "Stochastic / Robust / Bilevel Optimization",
         "all_tasks": 11,
-        "train_tasks": 9,
+        "train_tasks": 8,
+        "holdout_tasks": 1,
         "test_tasks": 2,
-        "target_test_tasks": 1.833
+        "target_holdout_tasks": 1.2
       },
       {
         "dimension": "problem",
         "value": "Vehicle Routing & TSP",
         "all_tasks": 30,
-        "train_tasks": 25,
+        "train_tasks": 21,
+        "holdout_tasks": 4,
         "test_tasks": 5,
-        "target_test_tasks": 5.0
+        "target_holdout_tasks": 3.333
       },
       {
         "dimension": "problem",
         "value": "Vehicle Scheduling",
         "all_tasks": 6,
-        "train_tasks": 5,
+        "train_tasks": 4,
+        "holdout_tasks": 1,
         "test_tasks": 1,
-        "target_test_tasks": 1.0
+        "target_holdout_tasks": 0.667
       },
       {
         "dimension": "runtime",
         "value": "Q1",
         "all_tasks": 45,
-        "train_tasks": 38,
+        "train_tasks": 33,
+        "holdout_tasks": 5,
         "test_tasks": 7,
-        "target_test_tasks": 7.5
+        "target_holdout_tasks": 5.067
       },
       {
         "dimension": "runtime",
         "value": "Q2",
         "all_tasks": 45,
-        "train_tasks": 37,
+        "train_tasks": 32,
+        "holdout_tasks": 5,
         "test_tasks": 8,
-        "target_test_tasks": 7.5
+        "target_holdout_tasks": 4.933
       },
       {
         "dimension": "runtime",
         "value": "Q3",
         "all_tasks": 45,
-        "train_tasks": 37,
+        "train_tasks": 32,
+        "holdout_tasks": 5,
         "test_tasks": 8,
-        "target_test_tasks": 7.5
+        "target_holdout_tasks": 4.933
       },
       {
         "dimension": "runtime",
         "value": "Q4",
         "all_tasks": 45,
-        "train_tasks": 38,
+        "train_tasks": 33,
+        "holdout_tasks": 5,
         "test_tasks": 7,
-        "target_test_tasks": 7.5
+        "target_holdout_tasks": 5.067
       },
       {
         "dimension": "size",
         "value": "Q1",
         "all_tasks": 45,
-        "train_tasks": 37,
+        "train_tasks": 32,
+        "holdout_tasks": 5,
         "test_tasks": 8,
-        "target_test_tasks": 7.5
+        "target_holdout_tasks": 4.933
       },
       {
         "dimension": "size",
         "value": "Q2",
         "all_tasks": 45,
-        "train_tasks": 38,
+        "train_tasks": 33,
+        "holdout_tasks": 5,
         "test_tasks": 7,
-        "target_test_tasks": 7.5
+        "target_holdout_tasks": 5.067
       },
       {
         "dimension": "size",
         "value": "Q3",
         "all_tasks": 45,
-        "train_tasks": 37,
+        "train_tasks": 32,
+        "holdout_tasks": 5,
         "test_tasks": 8,
-        "target_test_tasks": 7.5
+        "target_holdout_tasks": 4.933
       },
       {
         "dimension": "size",
         "value": "Q4",
         "all_tasks": 45,
-        "train_tasks": 38,
+        "train_tasks": 33,
+        "holdout_tasks": 5,
         "test_tasks": 7,
-        "target_test_tasks": 7.5
+        "target_holdout_tasks": 5.067
       },
       {
         "dimension": "year",
         "value": "2010-2014",
         "all_tasks": 19,
-        "train_tasks": 16,
+        "train_tasks": 14,
+        "holdout_tasks": 2,
         "test_tasks": 3,
-        "target_test_tasks": 3.167
+        "target_holdout_tasks": 2.133
       },
       {
         "dimension": "year",
         "value": "2015-2019",
         "all_tasks": 58,
-        "train_tasks": 48,
+        "train_tasks": 41,
+        "holdout_tasks": 7,
         "test_tasks": 10,
-        "target_test_tasks": 9.667
+        "target_holdout_tasks": 6.4
       },
       {
         "dimension": "year",
         "value": "2020+",
         "all_tasks": 69,
-        "train_tasks": 58,
+        "train_tasks": 50,
+        "holdout_tasks": 8,
         "test_tasks": 11,
-        "target_test_tasks": 11.5
+        "target_holdout_tasks": 7.733
       },
       {
         "dimension": "year",
         "value": "pre-2010",
         "all_tasks": 34,
-        "train_tasks": 28,
+        "train_tasks": 25,
+        "holdout_tasks": 3,
         "test_tasks": 6,
-        "target_test_tasks": 5.667
+        "target_holdout_tasks": 3.733
       }
     ]
   }

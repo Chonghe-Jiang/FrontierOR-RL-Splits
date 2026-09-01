@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate coverage, leakage boundaries, time limits, and generated hashes."""
+"""Validate coverage, leakage boundaries, holdout semantics, and generated hashes."""
 
 from __future__ import annotations
 
@@ -42,20 +42,25 @@ def main() -> None:
 
     partition = load_json(ROOT / "splits/task_partition.json")
     train_tasks = set(partition["train_tasks"])
+    holdout_tasks = set(partition["holdout_tasks"])
     test_tasks = set(partition["test_tasks"])
-    assert len(train_tasks) == 150
+    assert len(train_tasks) == 130
+    assert len(holdout_tasks) == 20
     assert len(test_tasks) == 30
     assert train_tasks.isdisjoint(test_tasks)
+    assert train_tasks.isdisjoint(holdout_tasks)
+    assert holdout_tasks.isdisjoint(test_tasks)
     assert {"earl2005", "ostrowski2012"} <= train_tasks
 
     catalog = list(csv.DictReader((ROOT / "data/task_catalog.csv").open(newline="")))
     assert len(catalog) == 180
-    assert {row["case_id"] for row in catalog} == train_tasks | test_tasks
+    assert {row["case_id"] for row in catalog} == train_tasks | holdout_tasks | test_tasks
     for field in ("problem_class", "formulation_type", "application_field"):
         all_counts = Counter(row[field] for row in catalog)
         train_values = {row[field] for row in catalog if row["partition"] == "train"}
+        holdout_values = {row[field] for row in catalog if row["partition"] == "holdout"}
         test_values = {row[field] for row in catalog if row["partition"] == "test"}
-        assert test_values <= train_values, f"Test-only value in {field}"
+        assert holdout_values | test_values <= train_values, f"Eval-only value in {field}"
         assert all(
             row["partition"] == "train"
             for row in catalog
@@ -75,19 +80,36 @@ def main() -> None:
         keys = [key(row) for row in records]
         assert len(keys) == len(set(keys)), f"Duplicate record in {split_id}"
         assert set(keys) <= all_keys
-        assert all(row["phase"] in {"train", "test"} for row in records)
+        assert all(row["phase"] in {"train", "holdout", "test"} for row in records)
         assert all(row["time_limit_seconds"] <= 900 for row in records)
+        assert all(
+            row["eval_time_limit_seconds"] == 900
+            for row in records
+            if row["phase"] in {"holdout", "test"}
+        )
+        assert all(
+            row["eval_time_limit_seconds"] is None
+            for row in records
+            if row["phase"] == "train"
+        )
+        assert payload["evaluation_analysis"]["official_uniform_eval_cap_seconds"] == 900
+        assert payload["evaluation_analysis"]["p90_gurobi_runtime_seconds"] > 300
 
     scale = loaded["scale_ood"]["records"]
     assert {key(row) for row in scale} == all_keys
     assert all(row["scale"] == "small" for row in scale if row["phase"] == "train")
+    assert all(row["scale"] == "large" for row in scale if row["phase"] == "holdout")
     assert all(row["scale"] == "large" for row in scale if row["phase"] == "test")
-    assert {row["case_id"] for row in scale if row["phase"] == "train"} == train_tasks | test_tasks
-    assert {row["case_id"] for row in scale if row["phase"] == "test"} == train_tasks | test_tasks
+    all_tasks = train_tasks | holdout_tasks | test_tasks
+    assert {row["case_id"] for row in scale if row["phase"] == "train"} == all_tasks
+    assert {row["case_id"] for row in scale if row["phase"] == "holdout"} == all_tasks
+    assert {row["case_id"] for row in scale if row["phase"] == "test"} == all_tasks
+    assert len([row for row in scale if row["phase"] == "holdout"]) == 180
 
     full = loaded["task_ood_full"]["records"]
     assert {key(row) for row in full} == all_keys
     assert {row["case_id"] for row in full if row["phase"] == "train"} == train_tasks
+    assert {row["case_id"] for row in full if row["phase"] == "holdout"} == holdout_tasks
     assert {row["case_id"] for row in full if row["phase"] == "test"} == test_tasks
 
     low = loaded["task_ood_low_resource"]["records"]
@@ -95,17 +117,25 @@ def main() -> None:
     low_by_task = defaultdict(list)
     for row in low:
         low_by_task[row["case_id"]].append(row)
-    assert set(low_by_task) == train_tasks | test_tasks
+    assert set(low_by_task) == train_tasks | holdout_tasks | test_tasks
     assert all(len(rows) == 2 for rows in low_by_task.values())
     assert all(Counter(row["scale"] for row in rows) == {"small": 1, "large": 1} for rows in low_by_task.values())
     assert {row["case_id"] for row in low if row["phase"] == "train"} == train_tasks
+    assert {row["case_id"] for row in low if row["phase"] == "holdout"} == holdout_tasks
     assert {row["case_id"] for row in low if row["phase"] == "test"} == test_tasks
 
     joint = loaded["joint_ood"]["records"]
     assert all(row["case_id"] in train_tasks and row["scale"] == "small" for row in joint if row["phase"] == "train")
+    assert all(row["case_id"] in holdout_tasks and row["scale"] == "large" for row in joint if row["phase"] == "holdout")
     assert all(row["case_id"] in test_tasks and row["scale"] == "large" for row in joint if row["phase"] == "test")
     assert {row["case_id"] for row in joint if row["phase"] == "train"} == train_tasks
+    assert {row["case_id"] for row in joint if row["phase"] == "holdout"} == holdout_tasks
     assert {row["case_id"] for row in joint if row["phase"] == "test"} == test_tasks
+
+    evaluation = load_json(ROOT / "splits/evaluation_protocol.json")
+    assert evaluation["uniform_eval_limit_seconds_per_instance"] == 900
+    assert evaluation["primary_attempts_per_instance"] == 1
+    assert {row["split_id"] for row in evaluation["split_analysis"]} == set(SPLIT_IDS)
 
     expected_hashes = {}
     for line in (ROOT / "MANIFEST.sha256").read_text().splitlines():
@@ -115,14 +145,16 @@ def main() -> None:
         assert sha256(ROOT / relative) == expected, f"Hash mismatch: {relative}"
 
     print("VALIDATION: PASS")
-    print("task partition: 150 train / 30 test; no alias or type leakage")
+    print("task partition: 130 train / 20 holdout / 30 test; no alias or type leakage")
     print("instance universe: 1,095 checker-accepted pairs")
-    print("time limits: {60, 120, 300, 600, 900}; hard maximum 900 seconds")
+    print("official evaluation limit: uniform 900 seconds per holdout/test instance")
+    print("planning tiers retained: {60, 120, 300, 600, 900}")
     print("large replicas: 179 complete 5-replica tasks; 3/2 is instance holdout, not scale OOD")
     for split_id in SPLIT_IDS:
         summary = loaded[split_id]["summary"]
         print(
             f"{split_id}: train={summary['train']['instance_count']} instances, "
+            f"holdout={summary['holdout']['instance_count']} instances, "
             f"test={summary['test']['instance_count']} instances"
         )
 
