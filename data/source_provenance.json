@@ -1,0 +1,57 @@
+{
+  "format": "frontieror-rl-split-provenance-v1",
+  "generated_at": "2026-09-01T00:43:07.814291+00:00",
+  "source_dataset": "LeoJiangOR/FrontierOR-Audited-180",
+  "source_revision": "a6fe77d0c79184bbea1e8f72ca6efd1a75eec1cf",
+  "source_runtime_format": "frontieror-gurobi-runtime-metadata-v1",
+  "source_runtime_summary": {
+    "case_count": 180,
+    "instance_count": 1095,
+    "checker_accepted_count": 1095,
+    "numeric_runtime_count": 1094,
+    "timeout_censored_count": 1,
+    "unavailable_count": 0,
+    "recommended_runtime_source_counts": {
+      "current_rerun_20260831": 158,
+      "historical_collaborator_archive": 922,
+      "historical_reference_regeneration_20260829": 15
+    },
+    "recommended_runtime_status_counts": {
+      "observed": 1094,
+      "timeout_censored": 1
+    },
+    "current_rerun_exact_artifact_alignment_count": 158,
+    "reference_regeneration_current_solution_hash_alignment_count": 15,
+    "archive_case_count": 185,
+    "archive_current_case_count": 179,
+    "archive_current_instance_intersection_count": 1072,
+    "archive_missing_current_cases": [
+      "ostrowski2012"
+    ],
+    "archive_extra_cases": [
+      "ceselli2009",
+      "feillet2005",
+      "maher2023",
+      "smet2016",
+      "tran2016",
+      "wang2018"
+    ],
+    "archive_slots_absent_from_current_release": [
+      {
+        "case_id": "segundo2019",
+        "instance": "large_instance_3.json"
+      },
+      {
+        "case_id": "segundo2019",
+        "instance": "large_instance_4.json"
+      }
+    ],
+    "only_non_numeric_runtime": {
+      "case_id": "castro2021",
+      "instance": "large_instance_4.json",
+      "status": "timeout_censored",
+      "raw_archive_value": "time_out"
+    }
+  },
+  "builder_seed": 20260831
+}
